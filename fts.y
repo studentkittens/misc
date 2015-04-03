@@ -17,8 +17,8 @@ typedef struct node {
     struct node *next;
 } node;
 
-struct node *HEAD = NULL;
-struct node *TAIL = NULL;
+node *HEAD = NULL;
+node *TAIL = NULL;
 
 char *add_node(char *format, ...) {
     node *new_node = malloc(sizeof(node));
@@ -46,10 +46,8 @@ char *add_node(char *format, ...) {
 
 %}
 
-/* 
-(artist:Knorkator | b:"Hasen Chart*") + a t:b ! d:2001-2003
-*/
 %pure-parser
+
 %token <tag>TAG
 %token <spec>SPEC <spec>MATCH_ALL
 %token <range>DATE_SPEC
@@ -118,6 +116,7 @@ expr:
 
     if(dates != NULL) {
         $$ = add_node("(%s)", dates);
+        free(dates);
     } else {
         $$ = add_node("");
     }
@@ -137,11 +136,15 @@ int main() {
 
     if(HEAD != NULL) {
         printf("-> %s\n", TAIL->text);
-        node *iter;
-        for(iter = HEAD; iter; iter = iter->next) {
+        node *iter = HEAD;
+        while(iter) {
             if(iter->text) {
                 free(iter->text);
             }
+
+            node *tmp = iter;
+            iter = iter->next;
+            free(tmp);
         }
     } else {
         yyerror("Empty input.");

@@ -5,7 +5,6 @@
 #include <string.h>
 #include "fts.tab.h"
 
-
 static const char *ABBREV_LIST[] = {
     ['a'] = "artist",
     ['b'] = "album",
@@ -31,7 +30,9 @@ static char *fix_tag() {
         if (c < '~') {
             tag = (char *)ABBREV_LIST[c];
         }
-    } else {
+    } 
+
+    if(tag == NULL) {
         tag = yytext;
     }
 
@@ -44,7 +45,7 @@ static char *fix_tag() {
 %option bison-bridge
 %x QUOTED_STRING EXPECT_DATE
 
-letter[a-zA-Z]
+letter [a-zA-Z]
 num [0-9]
 specelem [^ \t"*():+|!\n]
 
@@ -107,6 +108,10 @@ specelem [^ \t"*():+|!\n]
     }
 
     return DATE_SPEC;
+}
+
+<EXPECT_DATE> { 
+    printf("FFFFUUUU\n");
 }
 
 "*" {
