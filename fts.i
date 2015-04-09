@@ -21,6 +21,7 @@ static const char *ABBREV_LIST[] = {
     ['~'] = ""
 };
 
+/* Make an abbreviated tag to a full one, leave full one. */
 static char *fix_tag() {
     size_t len = strlen(yytext);
     char *tag = NULL;
@@ -41,10 +42,14 @@ static char *fix_tag() {
 
 %}
 
+/* General options */
 %option noyywrap
 %option bison-bridge
+
+/* Two states for date: and quoted strings */
 %x QUOTED_STRING EXPECT_DATE
 
+/* Utility patterns */
 letter [a-zA-Z]
 num [0-9]
 specelem [^ \t"*():+|!\n]
@@ -98,6 +103,7 @@ specelem [^ \t"*():+|!\n]
 <EXPECT_DATE>({num}+|{num}+-{num}+) {
     BEGIN(INITIAL);
     
+    /* Parse the date range. */
     char *is_range = strchr(yytext, '-');
     if(!is_range) {
         int val = strtol(yytext, NULL, 10);

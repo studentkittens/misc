@@ -36,6 +36,6 @@ int main(void) {
             break;
         }
     }
-    printf("%d %d\n", words, letters);
+    printf("%d words %d characters\n", words, letters);
     return 0;
 }
