@@ -222,15 +222,15 @@ Kommentare erkennen kann findet sich im Anhang unter ``7.i``.
 
 ## 3.6 Parser
 
-Die syntaktische Analyse kann durch endliche Automaten automatisiert werden,
-hier im speziellen Kellerautomaten.  Kellerautomaten bestehen aus einem Band,
-einem Eingabealphabet, einem Ausgabealphabet, einem Lesekopf der auf dem Band
-steht und einem Stack.  Zudem gibt es eine Tabelle mit Übergangsfunktionen die
-das Verhalten des Lesekopfes basierend auf der Eingabe und dem Stack definiert.
+Die syntaktische Analyse kann durch Kellearutomaten automatisiert werden.
+Kellerautomaten bestehen aus einem Band, einem Eingabealphabet, einem
+Ausgabealphabet, einem Lesekopf der auf dem Band steht und einem Stack.  Zudem
+gibt es eine Tabelle mit Übergangsfunktionen die das Verhalten des Lesekopfes
+basierend auf der Eingabe und dem Stack definiert.
 
 Aus theorethischer Sicht ist der Parser daher durch die Übergangstabelle[^1]
 gekennzeichent. Ein populäres Werkzeug um diese automatisch zu erstellen, ist
-``bison`` aus dem GNU Toolchain. Alternativ kann man natürlich auch ``yacc``
+``bison`` aus der GNU Toolchain. Alternativ kann man natürlich auch ``yacc``
 nehmen, da dieser das schönere Akronym hat: *Yet another compiler compiler*.
 
 
@@ -264,12 +264,12 @@ Der Aufbau einer ``bison``--Datei ist relativ ähnlich zu dem einer ``flex`` Dat
   werden indem aus den speziellen Variablen ``$1..$n`` ein neuer typisierter
   Ausdruck gebaut wird der in ``$$`` gespeichert wird. Dadurch werden die
   vorigen Tokens mit diesem neuen Ausdruck ersetzt. 
-- Weiterer C--Codeblock für ``main`` welcher ``yyparse()`` aufruft.
+- Weiterer C--Codeblock für ``main`` welche für gewöhnlich ``yyparse()`` aufruft.
 
 # 4 Eigenes Einsatzbeispiel
 
 Als Beispiel für das Zusammenarbeiten von ``flex`` und ``bison`` wurde eine
-kleine (für den Autor) nützliche Beispielanwendung geschrieben.
+kleine nützliche Beispielanwendung geschrieben.
 
 Die freie SQL--Datenbank ``SQLite3`` unterstützt Volltextsuche. Dazu
 implementiert die ``fts3``--Erweiterung (*f*ull *t*ext *s*earch) eine spezielle
@@ -294,8 +294,9 @@ Am Beispiel einer Musikdatenbank kann ein Ausdruck etwa so aussehen:
 ```
 
 Das ist natürlich für einen normalen Anwender eher schwer zu tippen oder zu
-lesen. Der Autor nutzt daher in seinem Hobby--MPD--Client[^2] eine alternative Syntax die
-dann intern zu einer validen ``SQLite3--fts`` ``MATCH`` Clause umgebaut wird.
+lesen. Der größtenteils vom Autor entwickelte MPD--CLient *Moosecat*[^2] nutzt
+eine alternative Syntax die dann intern zu einer validen ``SQLite3--fts``
+``MATCH`` Clause umgebaut wird.
 
 Der obige Ausdruck kann mit dieser Syntax von oben so umgeschrieben werden:
 
@@ -303,8 +304,8 @@ Der obige Ausdruck kann mit dieser Syntax von oben so umgeschrieben werden:
     (a:Knorkator | b:"Hasen*") + knor g:rock ! d:2001-2003
 ```
 
-Im Detail wird ``AND`` mit ``+``, ``OR`` mit ``|`` ersetzt und ``NOT`` mit
-``!``. Die Spaltennamen erhalten jeweils Abkürzungen, so wird beispielsweise aus
+Im Detail wird ``AND`` mit ,,``+``'', ``OR`` mit ,,``|``'' ersetzt und ``NOT`` mit
+,,``!``''. Die Spaltennamen erhalten jeweils Abkürzungen, so wird beispielsweise aus
 den längeren ``artist:SomeArtist`` das kürzere ``a:SomeArtist``. 
 Einzelne Begriffe wie ``a`` werden zu ``(artist:a OR album:a OR album_artist:a
 OR )`` ersetzt, da eine Suche in anderen Spalten wenig Sinn macht oder
