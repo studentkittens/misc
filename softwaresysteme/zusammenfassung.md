@@ -19,13 +19,13 @@ Kompilieren und Linken gegeben. Der Dozent nutzte dieses Beispiel ebenfalls um
 den Begriff des Compilers zu erklären und ihn mit verwandten Begriffen, wie den
 des Interpreters zu verbinden.
 
-Allgemein gesagt ist ein Compiler ein Übersetzer der eine Eingabesprache in eine
-Ausgabesprache übersetzt.  Im speziellen sind damit oft Compiler(sammlungen) wie
-``gcc`` oder ``clang`` gemeint, die Programmiersprachen wie ``C`` in
-Maschinencode übertragen. Interpreter übersetzen die Eingabesprache ,,live'' und
-führen sie gleich aus. Tritt ein Fehler auf, so stoppt auch die Übersetzung. Im
-besten Falle sollte der Compiler natürlich auch hilfreiche Fehlermeldungen
-produzieren. 
+Allgemein gesagt ist ein Compiler ein Übersetzer, der eine Eingabesprache in
+eine Ausgabesprache übersetzt.  Im Speziellen sind damit oft
+Compiler(-sammlungen) wie ``gcc`` oder ``clang`` gemeint, die
+Programmiersprachen wie ``C`` in Maschinencode übertragen. Interpreter
+übersetzen die Eingabesprache ,,live'' und führen sie dabei gleich aus. Tritt
+ein Fehler auf, so stoppt auch die Übersetzung. Im besten Falle sollte der
+Compiler dabei auch hilfreiche Fehlermeldungen produzieren. 
 
 Neben der Ein- und Ausgabesprache hängt das Resultat des Compilers meist auch
 von der Plattform ab auf dem er läuft. Beispielsweise produziert ``gcc`` auf der
@@ -46,13 +46,13 @@ Besonderen Stellenwert bekamen die eigentlichen Werkzeuge zum Compilerbau:
 
 # 3 Sprachtheorie
 
-Eine Sprache besteht aus: Wörtern, Grammatik (Syntax), Semantik und bei realen
-Sprachen noch aus der Pragmatik (Subjektive Kontextabhängigkeit). Letzeres
-sollte bei parse--baren Sprachen aus dem naheliegenden Grund der Eindeutigkeit
-nicht gegeben sein. Beim Compilerbau kommen daher nur *formale* Sprachen ohne
-Kontextabhängigkeit vor.
+Der Grundlage des Compilerbaus bildet die Sprachtheorie. Eine Sprache besteht
+hier aus: Wörtern, Grammatik (Syntax), Semantik und bei realen Sprachen noch aus
+der Pragmatik (Subjektive Kontextabhängigkeit). Letzeres sollte bei parse--baren
+Sprachen aus dem naheliegenden Grund der Eindeutigkeit nicht gegeben sein. Beim
+Compilerbau kommen daher nur *formale* Sprachen ohne Kontextabhängigkeit vor.
 
-## 3.1 Chomsky--Hierarchie
+## 3.1 Die Chomsky--Hierarchie
 
 Einteilung der formalen Sprachen nach ihrer Mächtigkeit in die Chomsky
 Hierarchie:
@@ -67,16 +67,17 @@ einen Ausdruck auf valide Klammerung überprüfen kann. Die meisten behandelten
 Sprachen fallen mindestens die ``CH2`` Kategorie. Jede ``CH2`` Sprache kann
 durch einen Kellerautomaten abgebildet werden. 
 
-## 3.2 BNF
+## 3.2 Backus--Naur--Form
 
-Computerlesbare Variante der Chomsky--Grammatiken. 
-Besonders Zeichen wie ,,$\varepsilon$'' (Leeres Token) oder  ,,$\Rightarrow$''
-und ,,$\Leftarrow$ '' sind nur schwer zu setzen. 
+Die BNF ist eine computerlesbare Variante der Chomsky--Grammatiken. Besonders
+Zeichen wie ,,$\varepsilon$'' (Leere Produktion) oder  ,,$\Rightarrow$'' und
+,,$\Leftarrow$ '' sind nur schwer zu setzen. 
 
-In der Praxis meist gebräuchlich als erweiterte Backus--Naur--Form.
-Beispielhafte *EBNF* für ein ``if`` mit optionalem ``else`` und *Endmarker*.
+In der Praxis meist gebräuchlich als erweiterte Backus--Naur--Form (*EBNF*). Als
+Beispiel für die Struktur der EBNF sei hier nur eine Grammatik für ein ``if``
+mit einem optionalem ``else`` samt ``end if``--Marker gegeben:
 
-```ebnf
+```ada
     if_statement ::=
       "if" cond "then"
          more_stmts
@@ -85,10 +86,11 @@ Beispielhafte *EBNF* für ein ``if`` mit optionalem ``else`` und *Endmarker*.
       "end if;"
 ```
 
-## 3.3 ``Dangling Else`` Problem
+Der ``else``--Teil ist stets optional.
+
+## 3.3 Das ``Dangling Else`` Problem
 
 Nicht jede Grammatik ist konfliktfrei, wie folgendes populäres Beispiel zeigt:
-
 Betrachte folgenden verschachteln ``if``--Ausdruck:
 
 * ``if c1 then if c2 then s1 else s2`` 
@@ -98,7 +100,7 @@ Mit folgender Grammatik:
 * ``S -> "if" cond "then" stmt;``
 * ``S -> "if" cond "then" S "else" stmt;``
 
-Ein Parser kann nicht entscheiden zu welchem ``if`` s2 gehört. 
+Ein Parser kann nicht entscheiden zu welchem ``if`` ``s2`` gehört. 
 Beides wären valide Varianten:
 
 * erstes ``if``:  ``if c1 then (if c2 then s1) else s2;``
@@ -106,52 +108,54 @@ Beides wären valide Varianten:
 
 *Allgemeine Lösungen:*
 
-- Änderung der Assoziativität der Tokens mit ``%right`` oder ``%left``.
-- Änderung der Operator--Präzedenz mit ``%pred``.
+- Änderung der Assoziativität der Tokens (bei ``bison`` mit ``%right`` oder
+  ``%left``).
+- Änderung der Operator--Präzedenz mit (bei ``bison`` mit ``%pred``).
 
-# 3.4 Compiler
+# 3.4 Abschnitte beim Kompilieren
 
-Bei größeren Compilern besteht der Ablauf meist aus folgenden Abschnitten:
+Die Kompilierung läuft bei großen Compilern normal in folgenden Abschnitten ab:
 
 - *Lexikalische Analyse:* Aufteilung der Eingabe in Tokens durch den *Scanner*.
   Als Resultat wird ein Tokenstrom erzeugt.
 - *Syntaktische Analyse:* Erkennung syntaktischer Ungereimtheiten durch den *Parser*.
-  Als Resultat wird (zumeist) ein *A*bstract *S*yntax *T*ree erzeugt und eine
+  Als Resultat wird (zumeist) ein **A**bstract **S**yntax **T**ree erzeugt und eine
   Symboltabelle erstellt.
 - *Semantische Analyse:* Erkennung falscher Typisierung und anderer
-  nicht--syntaktischer Probleme.
+  nicht--syntaktischer Probleme, wie undefinierter Variablen.
 - Im Anschluss kann der *AST* noch optional optimiert werden und in eine
   Zielsprache synthetisiert werden.
 - Bei einem ``C-Compiler`` müssen noch die einzelnen Object--Files zu einem
   ganzen Programm durch einen Linker gebunden werden.
 - Dem eventuell noch vorgelagert sind Ersetzungsschritte wie der Präprozessor
-  bei ``C`` (``echo "#include <stdlib.h>" | gcc -E -``).
+  bei ``C`` (Beispiel: ``echo "#include <stdlib.h>" | gcc -E -``).
 
 Desweiteren entsteht ein Henne--Ei--Problem beim Bau eines Compilers -- vor
 allem beim Bau einer neuen Rechnerarchitektur. Welcher Compiler übersetzt den
-Compiler? Die allgemeine Lösung ist das *Bootstrapping--Verfahren*. Dabei wird
-mittels einer vorhandenen Programmiersprache ein einfacher Compiler der ein
-Subset der Sprache übersetzen kann. Der kann dazu benutzt werden einen
-komplexeren Compiler zu schreiben und so weiter.
+Compiler? Die allgemeine Lösung hierzu ist das *Bootstrapping--Verfahren*. Dabei
+wird mittels einer vorhandenen Programmiersprache ein einfacher Compiler der
+eine Untermenge der Zielsprache übersetzen kann. Dieser kann dazu benutzt werden
+einen komplexeren Compiler zu schreiben welcher ein größere Untermenge
+übersetzen kann --- und so weiter.
 
 Dieses Prinzip kommt heutzutage vor allem bei *self--hosting* Compilern zu
 Tragen, welche in der selben Programmiersprache geschrieben sind, welche sie
-auch verarbeiten. Ein Beispiel hier wäre *go-lang*.
+auch verarbeiten. Ein aktuelles Beispiel hier wäre *go-lang*.
 
 Ein Compiler wird oft in einen *T--Diagramm* dargestellt (engl.
 *Tombstone--Diagram*).
 
-![Quelle: http://www2.math.uni-wuppertal.de/~axel/skripte/compiler/c1_06.html](tdia.png) 
-
 Dieses stellt lediglich die bereits erwähnten Komponenten dar: Eingabesprache,
 Ausgabesprache und Implementierungsplattform:
 
-## 3.5 Scanner
+![Quelle: http://www2.math.uni-wuppertal.de/~axel/skripte/compiler/c1_06.html](tdia.png) 
 
-Der Scanner zerlegt einen Zeichenstrom in einen Tokenstrom.
-Zunächst werden mehrere Zeichen zu einem Muster gruppiert --- dem sogenannten
-*Lexem*. Diesem wird ein Tokentyp und eventuell noch ein Wert zugeordnet. Bei
-einer Ganzzahl beispielsweise der Wert dieser Zahl.
+## 3.5 Scanner/Lexer
+
+Der Scanner zerlegt einen Zeichenstrom in einen Tokenstrom. Zunächst werden
+mehrere Zeichen zu einem Muster gruppiert --- dem sogenannten *Lexem*. Diesem
+wird ein Tokentyp und eventuell noch ein Wert zugeordnet. Bei einer Ganzzahl
+beispielsweise der Wert dieser Zahl. Dieses Bündel wird dann *Token* genannt.
 
 Eine populäre Implementierung um *Scanner* in er Programmiersprache zu erstellen
 ist ``lex``, bzw. dessen kompatible Weiterentwicklung aus dem GNU Umfeld.
@@ -175,7 +179,7 @@ Sektionen einer ``flex`` Datei (typischerweise mit der Endung ``.i``):
    optional, darf aber leer sein.
 3. Durch ein ``%%`` abgetrennt folgt der eigentliche Matching--Teil in dem 
    Muster, welche als regulärer Ausdruck gegeben sind, mit Aktionen verknüpft
-   werden können. Die Aktionen sind dabei wiederum C-Code der in geschweiften
+   werden können. Die Aktionen sind dabei wiederum C-Code, der in geschweiften
    Klammern dahinter geschrieben wird und im einfachten Falle den Tokentype
    zurückliefert oder auch komplexere Parsingaufgaben übernimmt.
    Ein simples Beispiel wäre die Definiton eines C--Variablennamen:
@@ -227,13 +231,13 @@ das Verhalten des Lesekopfes basierend auf der Eingabe und dem Stack definiert.
 Aus theorethischer Sicht ist der Parser daher durch die Übergangstabelle[^1]
 gekennzeichent. Ein populäres Werkzeug um diese automatisch zu erstellen, ist
 ``bison`` aus dem GNU Toolchain. Alternativ kann man natürlich auch ``yacc``
-nehmen da dies das schönere Akronym hat: *Yet another compiler compiler*.
+nehmen, da dieser das schönere Akronym hat: *Yet another compiler compiler*.
 
 
 ``bison`` gehört zur Klasse der der ``LR Parser``. Das heißt sie verarbeiten den
 Tokenstrom von links nach rechts und versuchen durch Ablegen und Tokens auf dem
 Stack (*Shift*) und Reduktion dieser (*Reduce*) zum Ergebnis zu kommen
-(Shift--Reduce--Automat).
+(*Shift--Reduce--Automat*).
 
 Die Grenze zwischen Parser und Scanner ist flüssig, da man auch das Umwandeln
 eines Strings in eine Ganzzahl als Parsen aufgefasst werden kann. Müssen aber
@@ -269,11 +273,11 @@ kleine (für den Autor) nützliche Beispielanwendung geschrieben.
 
 Die freie SQL--Datenbank ``SQLite3`` unterstützt Volltextsuche. Dazu
 implementiert die ``fts3``--Erweiterung (*f*ull *t*ext *s*earch) eine spezielle
-``MATCH``--Clause. Als Argument übergibt man dieser einen String in einer
+``MATCH``--Klausel. Als Argument übergibt man dieser einen String in einer
 bestimmten Syntax. Diese Syntax entspricht im einfachsten Falle einen simplen
 Suchbegriff der dann in allen Spalten der Datenbank gesucht wird. Zudem können
 spezielle Spalten ausgewählt werden und verschiedene Ausdrücke mit den `` AND
-``, `` OR `` und `` NOT `` verbunden werden. Zudem können Ausdrücke geklammert
+``, `` OR `` und `` NOT `` verbunden werden. Auch können Ausdrücke geklammert
 werden um doppeldeutige Reihenfolgen eindeutig zu machen. Auch sind Wildcards
 möglich um nur den Anfang eines Strings zu matchen.
 
@@ -285,8 +289,8 @@ Am Beispiel einer Musikdatenbank kann ein Ausdruck etwa so aussehen:
 
 ```bash
     (artist:Knorkator OR album:"Hasen*") AND (artist:knor OR album:knor OR
-    album_artist:knor OR title:knor) AND title:b AND (date:2001 OR date:2002 OR
-    date:2003)
+    album_artist:knor OR title:knor) AND genre:rock AND NOT (date:2001 OR
+    date:2002 OR date:2003)
 ```
 
 Das ist natürlich für einen normalen Anwender eher schwer zu tippen oder zu
@@ -296,7 +300,7 @@ dann intern zu einer validen ``SQLite3--fts`` ``MATCH`` Clause umgebaut wird.
 Der obige Ausdruck kann mit dieser Syntax von oben so umgeschrieben werden:
 
 ```bash
-    (artist:Knorkator | b:"Hasen*") + knor g:rock d:2001-2003
+    (a:Knorkator | b:"Hasen*") + knor g:rock ! d:2001-2003
 ```
 
 Im Detail wird ``AND`` mit ``+``, ``OR`` mit ``|`` ersetzt und ``NOT`` mit
