@@ -6,6 +6,12 @@
 
 Brainstorming:
 
+- Factoids:
+
+  - first seen 2009
+  - paradigms: parallel, imperativ, object oriented
+  - developed by ken thompson and rob pike
+
 - Glenda/Gopher as mascot
 - Mention gooogle doodles being written in it.
 - SOme other examples
@@ -13,7 +19,35 @@ Brainstorming:
 - Different object approach
 - show hello world.
 - Show mostly differences to other languages
+- Backend explanation:
+
+  - Communication part
+  - Processing part
+
 - Why is ist suitable for backend developement.
+
+  - damn fast.
+  - highly parallel 
+  - object oriented, although totally different to java. 
+  - there is even a concurrent web crawler at the end of the introduction tour
+    -- it has 60 lines as core.
+
+- Testing
+
+  - built in
+
+- Package manager built in too.
+
+Disadvantags
+
+- not so many libraries yet.
+- although go can link with most existing libraries.
+
+.. note::
+
+    ``gccgo`` needs to be used for that and only with conventionally 
+    compiled libraries.
+    However there is cgo.
 
 ----
 
@@ -28,4 +62,25 @@ Brainstorming:
 ``go-lang``
 ===========
 
-Test.
+Hello my kitteh.
+
+.. code-block:: go
+
+   package main
+
+   import "fmt"
+
+   func main() {
+       fmt.Println("Hello, 世界")
+   }
+
+-----
+
+:id: cats
+
+Go is object oriented
+=====================
+
+- But without classes. Huh?
+- Duck typing does not needed classes.
+- But there are interfaces!
