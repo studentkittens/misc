@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Vollkorn";
-    src: url:("fonts/Vollkorn-Regular.ttf"),
-    url:("fonts/Vollkorn-BoldItalic.ttf"),
-    url:("fonts/Vollkorn-Bold.ttf"),
-    url:("fonts/Vollkorn-Italic.ttf"),
-    url:("fonts/Vollkorn-MediumItalic.ttf"),
-    url:("fonts/Vollkorn-Medium.ttf"),
-    url:("fonts/Vollkorn-Regular.ttf"),
-    url:("fonts/Vollkorn-SemiboldItalic.ttf"),
-    url:("fonts/Vollkorn-Semibold.ttf");
+    src: url("fonts/Vollkorn-Regular.ttf"),
+    url("fonts/Vollkorn-BoldItalic.ttf"),
+    url("fonts/Vollkorn-Bold.ttf"),
+    url("fonts/Vollkorn-Italic.ttf"),
+    url("fonts/Vollkorn-MediumItalic.ttf"),
+    url("fonts/Vollkorn-Medium.ttf"),
+    url("fonts/Vollkorn-Regular.ttf"),
+    url("fonts/Vollkorn-SemiboldItalic.ttf"),
+    url("fonts/Vollkorn-Semibold.ttf");
 }
 
 @font-face {
