@@ -1,0 +1,29 @@
+: @font-face {
+    font-family: "Vollkorn";
+    src: url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-Regular.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-BoldItalic.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-Bold.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-Italic.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-MediumItalic.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-Medium.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-Regular.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-SemiboldItalic.ttf"),
+    url:("http://up.nullcat.de/vollkorn/TTF/Vollkorn-Semibold.ttf"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-regular-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-bolditalic-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-bold-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-italic-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-mediumitalic-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-medium-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-regular-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-semibolditalic-webfont.woff"),
+    url:("http://up.nullcat.de/vollkorn/WOFF/vollkorn-semibold-webfont.woff");
+}
+
+
+body {
+    font-size: normal;
+    font-family: Vollkorn, Verdana, Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+}
+
