@@ -25,11 +25,12 @@
 
 body {
     background-color: #fdf6e3;
+    font-size: 180%;
     font-family: Vollkorn, Verdana, Helvetica, Arial, sans-serif;
 }
 
-div#cats h1 {
+div#heading h1 {
     font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
-    font-size: 300%;
+    font-size: 260%;
     font-style: normal;
 }

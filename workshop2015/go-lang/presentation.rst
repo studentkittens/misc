@@ -37,6 +37,7 @@ Brainstorming:
   - built in
 
 - Package manager built in too.
+- compiles blazingly fast
 
 Disadvantags
 
@@ -48,6 +49,9 @@ Disadvantags
     ``gccgo`` needs to be used for that and only with conventionally 
     compiled libraries.
     However there is cgo.
+
+- Other weirdness: No exception (but error, defer, panic, recover) 
+- generics missing, but might be added in future versions.
 
 ----
 
@@ -76,11 +80,26 @@ Hello my kitteh.
 
 -----
 
-:id: cats
+:id: heading
 
-Go is object oriented
-=====================
+Go can do OOP 
+=============
 
-- But without classes. Huh?
+- But without classes and inheritance. Huh?
 - Duck typing does not needed classes.
 - But there are interfaces!
+
+.. code-block:: go
+
+   
+
+Go is parallel
+==============
+
+**Channels:** Something something.
+
+**Go routines** Another something.
+
+.. code-block:: go
+
+   make(chan SomeTyp)
