@@ -3,7 +3,7 @@
 :description: The Hovercraft! tutorial.
 :keywords: presentation, backend, impress.js, go-lang
 :data-transition-duration: 500
-:css: presentation.css
+:css: hovercraft.css
 
 Brainstorming:
 
@@ -17,72 +17,128 @@ Brainstorming:
 
 ----
 
-:id: cats
+:data-x: 300
+:data-y: 2000
 
-This is a first slide
-=====================
-
-Restructured text takes any line that is underlines with punctuation and
-makes it into a heading. Each type of undeline will be made into a different
-level of heading, but it is not the type that is important, but rather the
-order of which each type will be enountered
-
-So in this presentation, lines underlined with equal (=) characters will be
-made into a first-level (H1) heading.
-
-----
-
-First header
+Introduction
 ============
 
-You can choose other punctuation characters as your level 1 heading if you like,
-but this is the most common. Any if these character works::
-
-    = - ` : ' " ~ ^ _ * + # < > .
-
-Second header
--------------
-
-Third header
-............
-
-The drawback with reStructuredText is that you can't skip levels. You can't
-go directly from level 1 to level 3 without having a level 2 in between.
-If you do you get an error::
-
-    Title level inconsistent
+.. image:: images/flask.png
 
 ----
 
-Other formatting
-================
-
-All the normal reStructuredText functions are supported in Hovercraft!
-
-- Such as bulletlists, which start with a dash (-) or an asterisk (*).
-  You can have many lines of text in one bullet if you indent the
-  following lines.
-
-   - And you can have many levels of bullets.
-   
-       - Like this.
-    
-- There is *Emphasis* and **strong emphasis**, rendered as <em> and <strong>.
-
-----
-
-More formatting
+Project details
 ===============
 
-#. Numbered lists is of course also supported.
+* A micro web framework written in Python (2/3)
+* Developed by Armin Ronacher
+* Aims to be extensible and well documented
 
-#. They are automatically numbered.
+::
 
-#. But only for single-level lists and single rows of text.
+    The idea of Flask is to build a good 
+    foundation for all applications. Everything
+    else is up to you or extensions. 
+                              -- Armin Ronacher
 
-#. ``inline literals``, rendered as <tt> and usually shown with a monospace font, which is good for source code.
+----
 
-#. Hyperlinks, like Python_
+Microwebframework
+=================
 
-.. _Python: http://www.python.org
+* keeps the core simple but extensible
 
+  + no form validation
+  + has no database abstraction layer
+  + [ ... ]
+
+* add features by using extension
+
+  + Flask-OpenID, Flask-SQLAlchemy, ...
+
+
+----
+
+Hello World
+===========
+
+Creating a webpage with less code.
+
+.. code:: python
+
+    from flask import Flask
+    app = Flask('my helloworld app')
+
+    @app.route("/")
+    def hello():
+        return "Hello World!"
+
+    if __name__ == "__main__":
+        app.run()
+
+----
+
+Frontend
+========
+
+* Jinja2 
+
+    + Template Inheritance
+    + Fast development
+    + Secure
+
+* Extensions like Flask-Bootstrap
+  
+
+----
+
+Backend
+=======
+
+* Pros:
+
+  + Maximum flexibility by using extensions
+  + Batteries included 
+  + Fast prototyping language
+
+* Cons:
+
+  + Synchronous framework by nature
+  + ,,Slow" interpreted language
+
+----
+
+
+Security
+========
+
+* Flask-Security (extension)
+
+  + Session based authentication
+  + Role management
+  + Password encryption
+  + Basic HTTP authentication
+  + Token based authentication (activation | password recovery | resetting)
+  + User registration 
+  + Login tracking 
+  + JSON/Ajax Support
+
+* Jinja2 XSS prevention
+
+
+----
+
+Developement Tools
+==================
+
+* Integrated development server and debugger
+
+.. code:: python
+
+   if __name__ == '__main__':
+       app.run(debug=True, port='4242')
+
+Testing
+=======
+ 
+* integrated unit testing support
