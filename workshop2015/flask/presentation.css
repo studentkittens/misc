@@ -23,6 +23,13 @@
 
 }
 
+@font-face {
+    font-family: 'Satisfy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Satisfy-Regular.woff2'); format('woff2')
+}
+
 body {
     background-color: #fdf6e3;
     font-size: 200%;
@@ -33,4 +40,9 @@ h1 {
     font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
     font-size: 300%;
     font-style: normal;
+}
+
+strong {
+    font-family: Satisfy;
+    font-size: 110%;
 }

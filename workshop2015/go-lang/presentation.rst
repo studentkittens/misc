@@ -69,8 +69,8 @@ Hello World!
 
 -----
 
-Stuff that's written in Go
-==========================
+Stuff that's written in **Go**
+==============================
 
 *Not so much yet actually:*
 
@@ -78,7 +78,7 @@ Stuff that's written in Go
 - Google App Engine
 - Docker
 
-In general, a lot of backend stuff:
+In general, a lot of backend stuff.
 
 .. image:: images/appengine.png
    :align: left
