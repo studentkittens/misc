@@ -32,7 +32,7 @@ Project details
 
 * A micro web framework written in Python (2/3)
 * Developed by Armin Ronacher
-* Aims to be extensible and well documented
+* Extensively documented
 
 ::
 
@@ -46,13 +46,13 @@ Project details
 Microwebframework
 =================
 
-* keeps the core simple but extensible
+* Keeps the core simple but extensible
 
-  + no form validation
-  + has no database abstraction layer
+  + No form validation
+  + Has no database abstraction layer
   + [ ... ]
 
-* add features by using extension
+* Add features by using extension
 
   + Flask-OpenID, Flask-SQLAlchemy, ...
 
