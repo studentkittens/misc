@@ -25,6 +25,13 @@
 
 }
 
+@font-face {
+    font-family: 'Satisfy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Satisfy-Regular.woff2'); format('woff2')
+}
+
 body {
     background-color: #fdf6e3;
     font-size: 180%;

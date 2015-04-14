@@ -17,7 +17,7 @@ Brainstorming:
 
 ----
 
-Introduction
+Introduction 
 ============
 
 .. image:: images/flask.png
@@ -31,6 +31,7 @@ Project details
 * A micro web framework written in Python (2/3)
 * Developed by Armin Ronacher
 * Extensively documented
+
 
 ::
 
