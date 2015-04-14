@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville|Racing+Sans+One|Satisfy);
+
 @font-face {
     font-family: "Vollkorn";
     src: url("fonts/Vollkorn-Regular.ttf"),
@@ -33,4 +35,24 @@ div#heading h1 {
     font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
     font-size: 260%;
     font-style: normal;
+    margin-top: -42px;
+}
+
+div#first {
+    font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 350%;
+    font-style: normal;
+}
+
+div#first p {
+    float: right;
+}
+
+div#fin {
+    text-align: center;
+}
+
+strong {
+    font-family: Satisfy;
+    font-size: 142%;
 }
