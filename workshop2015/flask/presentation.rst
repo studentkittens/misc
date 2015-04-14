@@ -30,9 +30,9 @@ Introduction
 Project details
 ===============
 
-* A microwebframework written in Python
+* A micro web framework written in Python (2/3)
 * Developed by Armin Ronacher
-* Aims to be extensible and well documented
+* Extensively documented
 
 ::
 
@@ -46,16 +46,15 @@ Project details
 Microwebframework
 =================
 
-* keeps the core simple but extensible
+* Keeps the core simple but extensible
 
-  + no form validation
-  + has no database abstraction layer
+  + No form validation
+  + Has no database abstraction layer
   + [ ... ]
 
-* add features by using extension
+* Add features by using extension
 
   + Flask-OpenID, Flask-SQLAlchemy, ...
-
 
 
 ----
@@ -77,15 +76,69 @@ Creating a webpage with less code.
     if __name__ == "__main__":
         app.run()
 
+----
+
+Frontend
+========
+
+* Jinja2 
+
+    + Template Inheritance
+    + Fast development
+    + Secure
+
+* Extensions like Flask-Bootstrap
+  
+
+----
+
+Backend
+=======
+
+* Pros:
+
+  + Maximum flexibility by using extensions
+  + Batteries included 
+  + Fast prototyping language
+
+* Cons:
+
+  + Synchronous framework by nature
+  + ,,Slow" interpreted language
 
 ----
 
 
-Additional features
-===================
+Security
+========
 
-* Integrated developement server and debugger
-* RESTful request dispatching
-* Support for secure cookies (client side sessions)
-* Unicode-based
-* Google App Engine Compatibility
+* Flask-Security (extension)
+
+  + Session based authentication
+  + Role management
+  + Password encryption
+  + Basic HTTP authentication
+  + Token based authentication (activation | password recovery | resetting)
+  + User registration 
+  + Login tracking 
+  + JSON/Ajax Support
+
+* Jinja2 XSS prevention
+
+
+----
+
+Developement Tools
+==================
+
+* Integrated development server and debugger
+
+.. code:: python
+
+   if __name__ == '__main__':
+       app.run(debug=True, port='4242')
+
+Testing
+=======
+ 
+* integrated unit testing support
