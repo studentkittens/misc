@@ -62,7 +62,7 @@ Microwebframework
 Hello World
 ===========
 
-Creating a webpage with less code.
+Creating a page with less code.
 
 .. code:: python
 
@@ -78,17 +78,43 @@ Creating a webpage with less code.
 
 ----
 
-Frontend
-========
+
+Frontend #1
+===========
 
 * Jinja2 
 
     + Template Inheritance
     + Fast development
-    + Secure
-
+    
+* Tempesting engine can be easily exchanged
 * Extensions like Flask-Bootstrap
   
+.. note:: Rendering templates in Python is not fun, you have to about proper
+   html excaping to keep your application secure
+
+----
+
+Frontend 2#
+===========
+
+.. code:: python
+
+    from flask import render_template
+
+    @app.route('/hello/<name>')
+    def hello(name=None):
+        return render_template('hello.html', name=name)
+
+.. code:: html
+
+   <!doctype html>
+        <title>Hello from Flask</title>
+    {% if name %}
+          <h1>Hello {{ name }}!</h1>
+    {% else %}
+          <h1>Hello World!</h1>
+    {% endif %}
 
 ----
 
@@ -105,6 +131,12 @@ Backend
 
   + Synchronous framework by nature
   + ,,Slow" interpreted language
+
+
+.. note::
+
+    Critical parts may be exchanged with Cython/C
+    There is socketio, autobahn, tornado to implement async behaviour
 
 ----
 
@@ -125,6 +157,11 @@ Security
 
 * Jinja2 XSS prevention
 
+.. note:: 
+
+    Various security modules
+    KISS by default -> less bugs
+    Jinja2 enhanced security 
 
 ----
 
@@ -142,3 +179,4 @@ Testing
 =======
  
 * integrated unit testing support
+* Python unittest support
