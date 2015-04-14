@@ -3,7 +3,7 @@
 :description: The Hovercraft! tutorial.
 :keywords: presentation, backend, impress.js, go-lang
 :data-transition-duration: 500
-:css: hovercraft.css
+:css: presentation.css 
 
 Brainstorming:
 
@@ -17,14 +17,11 @@ Brainstorming:
 
 ----
 
-:data-x: 300
-:data-y: 2000
-
 Introduction
 ============
 
 .. image:: images/flask.png
-    :width: 40%
+    :width: 50%
 
 ----
 
