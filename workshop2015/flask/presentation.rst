@@ -24,6 +24,7 @@ Introduction
 ============
 
 .. image:: images/flask.png
+    :width: 40%
 
 ----
 
@@ -137,6 +138,7 @@ Backend
 
     Critical parts may be exchanged with Cython/C
     There is socketio, autobahn, tornado to implement async behaviour
+    Flask on Google WebApp
 
 ----
 

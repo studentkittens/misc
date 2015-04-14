@@ -3,15 +3,14 @@
 
 from flask import Flask, render_template, url_for
 
-app = Flask('my helloworld app')
+app = Flask('my hello world app')
 
-@app.route('/plain/<name>')
+@app.route('/<name>')
 def plain(name=None):
-    return name
-
-@app.route('/html/<name>')
-def htmlrender(name=None):
-    return render_template('index.html', name=name)
+    if name is None:
+        return 'This is just plain text, {}'.format(name)
+    else:
+        return render_template('index.html', name=name)
 
 if __name__ == "__main__":
     app.run(debug=True)
