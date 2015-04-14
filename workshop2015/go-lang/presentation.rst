@@ -15,8 +15,8 @@
     Mention Gopher.
 
 .. image:: images/glenda.png
-   :width: 30%
-   :align: center
+   :width: 25%
+   :align: left
 
 Google Go
 
@@ -72,13 +72,13 @@ Hello World!
 Stuff that's written in Go
 ==========================
 
-Not so much yet actually.
+*Not so much yet actually:*
 
 - Google Doodles (you seem them daily!)
 - Google App Engine
 - Docker
 
-In general, a lot of backend stuff.
+In general, a lot of backend stuff:
 
 .. image:: images/appengine.png
    :align: left
@@ -94,28 +94,36 @@ In general, a lot of backend stuff.
 
 .. note:: 
 
-    Okay, now a very short tour through the language.
+    Okay, now a very short tour through the language.  I cannot give an
+    tutorial, but I can show some of the special features of Go Go has also most
+    of the constructs and datastructures most other imperative language have,
+    but we'll focus on the weird bits. 
 
 -----
 
 :id: heading
 
-Go can do OOP 
+Go can do OOP
 =============
 
-- But without classes and inheritance. *Huh?*
+But without classes and inheritance. **Huh?**
+
 - Duck typing does not needed classes.
-- But there are interfaces and (anonymous) composition!
+- But here are interfaces and (anonymous) composition!
 
 .. code-block:: go
 
    type Animal {
-       Name string        // 
+       Name string        // general member
    }
 
    type Cat {
        Animal             // anonymous member
        CutenessLevel int  // some other member
+   }
+
+   func greetAnimal(cat *Cat) {
+        fmt.Println("Hello, " + cat.Name)
    }
 
 
@@ -124,14 +132,57 @@ Go can do OOP
 Go is parallel
 ==============
 
-**Channels:** Something something.
+... and parallel is easy with Go.
 
-**Go routines** Another something.
+.. note::
+
+    No conventional threads. 
+    Only goroutines and channels to communicate between them.
+    go routines can be seen as lightweight threads.
+
+
+*Go routines:* 
 
 .. code-block:: go
 
-   make(chan SomeTyp)
+    func f(i int) {
+        fmt.Println(i)
+    }
 
+    func main() {
+        for i := 0; i < 10; i++ {
+            go f()    
+        }
+    }
+
+------
+
+Go is parallel (#2)
+===================
+
+*Channels:*
+
+.. code-block:: go
+
+    func echo(c chan int) {
+        for {
+            msg := <- c
+            fmt.Println(msg)
+        }
+    }
+
+    func main() {
+        numbers = make(chan int)
+        go echo(numbers)
+        
+        for i := 0; i < 10; i++ {
+            cmds <- i
+        }
+    }
+
+.. note::
+
+    Parallelism is built into the language itself.
 
 -----
 
@@ -242,18 +293,23 @@ Developer tools
 
 .. note:: 
 
-    go shebang
+    go shebang erwähnen.
 
 -------
 
 Security
 ========
 
--  
+.. note:: 
 
-- automatic garbage collection
-- no pointer arithmetics or buffer overflows
-- out-of-index can be handled by global recover.
+    Go is a programming language and you can't say "It's secure"#
+    out of the box. 
+
+**Go** features that might help make applications secure:
+
+- No pointer arithmetics or buffer overflows.
+- Automatic garbage collection.
+- Strings are always UTF-8.
 
 -------
 
