@@ -15,7 +15,10 @@ Brainstorming:
 - Good for prototyping
 - If not enought go go!
 
+
 ----
+
+:id: first
 
 Introduction 
 ============
@@ -25,41 +28,69 @@ Introduction
 
 ----
 
-Project details
-===============
 
-* A micro web framework written in Python (2/3)
+:id: details 
+
+
+What is **Flask**?
+==================
+
+.. image:: images/ar.png
+    :width: 40%
+
+* A microwebframework written in Python
+* Started as a April Fool's joke
 * Developed by Armin Ronacher
-* Extensively documented
 
 
-::
-
-    The idea of Flask is to build a good 
-    foundation for all applications. Everything
-    else is up to you or extensions. 
-                              -- Armin Ronacher
 
 ----
 
-Microwebframework
-=================
 
-* Keeps the core simple but extensible
+What does this **micro** mean?
+==============================
+
+:: 
+
+    The idea of Flask is to build a good foundation for all 
+    applications. Everything else is up to you or extensions.  
+                                           -- Armin Ronacher
+
+* Based on Werkzeug WSGI toolkit 
+* Uses Jinja 2 template engine
+
+
+.. image:: images/werkzeug.png
+    :width: 20%
+
+.. image:: images/jinja2.png
+    :width: 20%
+
+* Aims to extensible and well documented
+
+.. note: depends only on jinja 2 and werkzeug
+
+----
+
+What does this **micro** mean? #2
+=================================
+
+* Flask keeps the core simple but extensible
 
   + No form validation
   + Has no database abstraction layer
-  + [ ... ]
+  + no user management
 
-|
+* Add features yourself by using extensions
 
-* Add features by using extension
-
-  + Flask-OpenID, Flask-SQLAlchemy, ...
+  + Flask-WTF
+  + Flask-Cache
+  
   
 .. note:: wsgi, google app engine copatible, werkzeug
 
 ----
+
 
 Hello World
 ===========
@@ -69,10 +100,10 @@ Creating a page with less code.
 .. code:: python
 
     from flask import Flask
-    app = Flask('my helloworld app')
+    app = Flask('myapp')
 
     @app.route("/")
-    def hello():
+    def index_page():
         return "Hello World!"
 
     if __name__ == "__main__":
@@ -81,13 +112,13 @@ Creating a page with less code.
 ----
 
 
-Frontend #1
-===========
+Frontend and Backend #1
+=======================
 
-* Jinja2 
+* Jinja 2 
 
     + Template Inheritance
-    + Fast development
+    + Fast and flexible development
     
 * Tempesting engine can be easily exchanged
 * Extensions like Flask-Bootstrap
@@ -97,16 +128,9 @@ Frontend #1
 
 ----
 
-Frontend #2
-===========
 
-.. code:: python
-
-    from flask import render_template
-
-    @app.route('/hello/<name>')
-    def hello(name=None):
-        return render_template('hello.html', name=name)
+Frontend and Backend #2
+=======================
 
 .. code:: html
 
@@ -118,18 +142,26 @@ Frontend #2
           <h1>Hello World!</h1>
     {% endif %}
 
+.. code:: python
+
+    from flask import render_template
+
+    @app.route('/greet/<name>')
+    def greet(name=None):
+        return render_template('hello.html', name=name)
+
 ----
 
-Backend
-=======
+Frontend and Backend #3
+=======================
 
-* Pros:
+* **Pros**:
 
   + Maximum flexibility by using extensions
   + Batteries included 
   + Fast prototyping language
 
-* Cons:
+* **Cons**:
 
   + Synchronous framework by nature
   + ,,Slow" interpreted language
@@ -153,7 +185,7 @@ Security
   + Role management
   + Password encryption
   + Basic HTTP authentication
-  + Token based authentication (activation | password recovery | resetting)
+  + Token based authentication
   + User registration 
   + Login tracking 
   + JSON/Ajax Support
@@ -163,22 +195,53 @@ Security
 .. note:: 
 
     Various security modules
-    KISS by default -> less bugs
-    Jinja2 enhanced security 
+    KISS by default -> less bugs prone
+    Jinja2 enhanced security -> unix philosophy
 
 ----
 
-Developement Tools
-==================
 
-* Integrated development server and debugger
+Developement Environment #1
+===========================
+
+Yes there are IDE's and Plugins!
+
+* Eric
+* PyCharm
+* PyDev
+
+But, Python developers often prefer to use simple text editors like **vim** or
+**emacs**.
+
+----
+
+Developement Environment #2
+===========================
+
+* Integrated development server 
+* Running on http://localhost:4242
 
 .. code:: python
 
    if __name__ == '__main__':
        app.run(debug=True, port='4242')
 
+.. note:: No webserver needed for testing
+
+
 ----
+
+Developement Environment #3
+===========================
+
+* Integrated debugger console
+* Directly integrated http://localhost:4242
+
+.. code:: python
+
+   if __name__ == '__main__':
+       app.run(debug=True, port='4242')
+
 
 Testing
 =======
