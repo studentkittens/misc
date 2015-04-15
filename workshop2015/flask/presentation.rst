@@ -51,10 +51,13 @@ Microwebframework
   + Has no database abstraction layer
   + [ ... ]
 
+|
+
 * Add features by using extension
 
   + Flask-OpenID, Flask-SQLAlchemy, ...
-
+  
+.. note:: wsgi, google app engine copatible, werkzeug
 
 ----
 
@@ -94,7 +97,7 @@ Frontend #1
 
 ----
 
-Frontend 2#
+Frontend #2
 ===========
 
 .. code:: python
@@ -175,8 +178,9 @@ Developement Tools
    if __name__ == '__main__':
        app.run(debug=True, port='4242')
 
+----
+
 Testing
 =======
  
-* integrated unit testing support
-* Python unittest support
+* Integrated unit testing support
