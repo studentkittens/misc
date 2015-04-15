@@ -38,12 +38,13 @@ body {
     font-family: Vollkorn, Verdana, Helvetica, Arial, sans-serif;
 }
 
-div#heading h1 {
+div.heading h1 {
     font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
     font-size: 260%;
     font-style: normal;
     margin-top: -42px;
 }
+
 
 div#first {
     font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
@@ -59,7 +60,17 @@ div#fin {
     text-align: center;
 }
 
+.blocky {
+    font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 320%;
+    font-style: normal;
+}
+
 strong {
     font-family: Satisfy;
     font-size: 110%;
+}
+
+.underline {
+    text-decoration: underline;
 }
