@@ -20,12 +20,18 @@ Brainstorming:
 
 :id: first
 
-Introduction 
-============
+
+**10 Minutes** Introduction to
+==============================
 
 .. image:: images/flask.png
     :width: 50%
 
+.. note:: 
+    * Welcome everbody
+    * A introduction to Flask,
+      to find out if Flask is
+      a suitable 
 ----
 
 
@@ -47,8 +53,8 @@ What is **Flask**?
 ----
 
 
-What does this **micro** mean?
-==============================
+What does this **micro** mean? #1
+=================================
 
 :: 
 
@@ -247,3 +253,36 @@ Testing
 =======
  
 * Integrated unit testing support
+* Werkzeug test Client
+
+.. code:: python
+
+   import unittest
+
+   class TestCase(unittest.TestCase):
+
+       def setUp(self):
+           app.config['TESTING'] = True
+           db.init_db()
+
+       def tearDown(self):
+           db.cleanup()
+
+       def test_case_xy(self):
+           assert app.value == 'my expected value'
+
+   if __name__ == '__main__':
+       unittest.main()
+
+----
+
+Let's sum up
+============
+
+Is Flask a suitable solution for a paper distribution platform?
+
+* Highly extensible framework
+* Fast prototyping possible
+* Python is widely used among researchers
+
+**Any questions?**
