@@ -3,7 +3,7 @@
 :description: The Hovercraft! tutorial.
 :keywords: presentation, backend, impress.js, go-lang
 :data-transition-duration: 500
-:css: hovercraft.css
+:css: presentation.css 
 
 Brainstorming:
 
@@ -17,14 +17,11 @@ Brainstorming:
 
 ----
 
-:data-x: 300
-:data-y: 2000
-
-Introduction
+Introduction 
 ============
 
 .. image:: images/flask.png
-    :width: 40%
+    :width: 50%
 
 ----
 
@@ -34,6 +31,7 @@ Project details
 * A micro web framework written in Python (2/3)
 * Developed by Armin Ronacher
 * Extensively documented
+
 
 ::
 
@@ -53,10 +51,13 @@ Microwebframework
   + Has no database abstraction layer
   + [ ... ]
 
+|
+
 * Add features by using extension
 
   + Flask-OpenID, Flask-SQLAlchemy, ...
-
+  
+.. note:: wsgi, google app engine copatible, werkzeug
 
 ----
 
@@ -96,7 +97,7 @@ Frontend #1
 
 ----
 
-Frontend 2#
+Frontend #2
 ===========
 
 .. code:: python
@@ -177,8 +178,9 @@ Developement Tools
    if __name__ == '__main__':
        app.run(debug=True, port='4242')
 
+----
+
 Testing
 =======
  
-* integrated unit testing support
-* Python unittest support
+* Integrated unit testing support
