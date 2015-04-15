@@ -456,6 +456,7 @@ Summary - the downsides
 - Not so many **libraries** to chose from (yet).
 - No **Generics** (yet).
 - No **Exceptions**. *(\*)*
+- Googling for *,,go for''* does not do much.
 
 (\* although replaced by ``defer`` and ``panic/recover``)
 
