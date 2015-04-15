@@ -61,7 +61,14 @@ div#first h1{
 }
 
 
-div#details img{
+div#puzzle img{
+    float: right;
+}
+
+div#security img{
+    float: right;
+}
+div#ide img{
     float: right;
 }
 

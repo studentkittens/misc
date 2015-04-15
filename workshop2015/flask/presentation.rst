@@ -29,9 +29,9 @@ Brainstorming:
 
 .. note:: 
     * Welcome everbody
-    * A introduction to Flask,
-      to find out if Flask is
-      a suitable 
+    * Find out if Flask might be suitable 
+      for our paper deployment plattform
+
 ----
 
 
@@ -45,10 +45,15 @@ What is **Flask**?
     :width: 40%
 
 * A microwebframework written in Python
-* Started as a April Fool's joke
+* Started as a April Fool's joke in 2010
 * Developed by Armin Ronacher
+* Open Source (BSD License)
 
-
+.. note::
+    * Developer of Flask Armin Ronacher
+    * Started  as Project Denied, because of
+      huge user response, Flask was started
+    * Just about 2500 lines of code
 
 ----
 
@@ -64,6 +69,7 @@ What does this **micro** mean? #1
 
 * Based on Werkzeug WSGI toolkit 
 * Uses Jinja 2 template engine
+* Aims to extensible and well documented
 
 
 .. image:: images/werkzeug.png
@@ -72,11 +78,17 @@ What does this **micro** mean? #1
 .. image:: images/jinja2.png
     :width: 20%
 
-* Aims to extensible and well documented
 
 .. note: depends only on jinja 2 and werkzeug
 
+.. note::
+    * Flask only depends on Jinja2 and Werkzeug
+    * Werkzeug is a WSGI middleware wich acts between
+      the Python application and the webserver
+
 ----
+
+:id: puzzle
 
 What does this **micro** mean? #2
 =================================
@@ -86,20 +98,37 @@ What does this **micro** mean? #2
   + No form validation
   + Has no database abstraction layer
   + no user management
+  + ...
+
+.. image:: images/plugin.png
+    :width: 20%
 
 * Add features yourself by using extensions
 
   + Flask-WTF
+  + Flask-SQLAlchemy 
   + Flask-Cache
+  + ...
+
+
   
   
-.. note:: wsgi, google app engine copatible, werkzeug
+.. note:: 
+    * In Ruby on Rails or Django has it all included
+    * Flask just provides a simple core
+
+    * But thats a strength of Flask
+    * By using Flask the user has almost the full control 
+      of what is going on
+    * Extensible by using extensions and plugins
+    * Large Frameworks like Django are often overkill for small projekts
+    * One Drop at a time -> Install just what you need
 
 ----
 
 
-Hello World
-===========
+Flask Hello World
+=================
 
 Creating a page with less code.
 
@@ -108,82 +137,128 @@ Creating a page with less code.
     from flask import Flask
     app = Flask('myapp')
 
-    @app.route("/")
+    @app.route("/", methods=['GET'])
     def index_page():
-        return "Hello World!"
+        return "Hello Flask!"
 
     if __name__ == "__main__":
         app.run()
 
+
+.. code:: bash
+
+    $ curl -i localhost:5000
+    HTTP/1.0 200 OK
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 11
+    Server: Werkzeug/0.10.4 Python/2.7.8
+    Date: Wed, 15 Apr 2015 17:46:07 GMT
+
+    Hello Flask
+
+.. note::
+    * Decribe mapping route to function
+    * http methods
+    * tell about curl -> just TEXT output, not html!
+
 ----
 
 
-Frontend and Backend #1
-=======================
+Templating Engine
+=================
 
-* Jinja 2 
+* Jinja 2 is the default templating engine
 
     + Template Inheritance
     + Fast and flexible development
+    + Can be easily exchanged
     
-* Tempesting engine can be easily exchanged
-* Extensions like Flask-Bootstrap
+* Can be combined with Bootstrap using Flask-Bootstrap
   
-.. note:: Rendering templates in Python is not fun, you have to about proper
-   html excaping to keep your application secure
+.. note:: 
+   * Rendering templates in Python is not fun
+   * you have to care about proper html
+     excaping to keep your application secure
 
 ----
 
 
-Frontend and Backend #2
-=======================
+Jinja 2 Hello World
+===================
+
+* Jinja 2 template:
 
 .. code:: html
 
-   <!doctype html>
-        <title>Hello from Flask</title>
-    {% if name %}
-          <h1>Hello {{ name }}!</h1>
+    <!doctype html>
+    <title>Hello from Flask</title>
+    {% if name == 'pacman' %}
+        <h1>
+        {{ name.capitalize() }}, watch out for ghosts! ᗧ ••• ᗣ ••
+        </h1>
     {% else %}
-          <h1>Hello World!</h1>
+        <h1>Hello {{ name }}!</h1>
     {% endif %}
+
+* Flask application:
 
 .. code:: python
 
     from flask import render_template
 
     @app.route('/greet/<name>')
-    def greet(name=None):
-        return render_template('hello.html', name=name)
-
-----
-
-Frontend and Backend #3
-=======================
-
-* **Pros**:
-
-  + Maximum flexibility by using extensions
-  + Batteries included 
-  + Fast prototyping language
-
-* **Cons**:
-
-  + Synchronous framework by nature
-  + ,,Slow" interpreted language
-
+        return render_template('greet.html', name=name)
 
 .. note::
+    * html, body, title missing i know
+    * Jinja has different markers
+    * Python code inside templates possible
 
-    Critical parts may be exchanged with Cython/C
-    There is socketio, autobahn, tornado to implement async behaviour
-    Flask on Google WebApp
 
 ----
 
+
+Jinja 2 Hello World
+===================
+
+.. code:: python
+
+    @app.route('/greet/<name>')
+    def greet(name=None):
+        return render_template('greet.html', name=name)
+
+.. code:: bash
+
+   $ curl -i localhost:5000/greet/pacman
+   <!doctype html>
+   <title>Hello from Flask</title>
+    
+       <h1>Pacman, watch out for ghosts! ᗧ ••• ᗣ •• </h1>
+
+
+.. code:: bash
+
+   $ curl -i localhost:5000/greet/batman
+   <!doctype html>
+   <title>Hello from Flask</title>
+    
+           <h1>I am batman!</h1>
+
+.. note::
+    * By running curl with different names, our application
+      delivers different results, according to the code
+      of our Jinja 2 template
+
+----
+
+
+:id: security
 
 Security
 ========
+
+.. image:: images/helmet.png
+    :width: 20%
 
 * Flask-Security (extension)
 
@@ -193,22 +268,21 @@ Security
   + Basic HTTP authentication
   + Token based authentication
   + User registration 
-  + Login tracking 
-  + JSON/Ajax Support
+  + [...]
 
-* Jinja2 XSS prevention
+* Jinja 2 proper HTML escaping to prevent XSS
 
 .. note:: 
-
-    Various security modules
-    KISS by default -> less bugs prone
-    Jinja2 enhanced security -> unix philosophy
+    * Various security modules
+    * KISS by default -> less bugs prone
+    * Jinja2 enhanced security -> unix philosophy
 
 ----
 
+:id: ide
 
-Developement Environment #1
-===========================
+Python IDE's and Editors
+========================
 
 Yes there are IDE's and Plugins!
 
@@ -216,44 +290,90 @@ Yes there are IDE's and Plugins!
 * PyCharm
 * PyDev
 
-But, Python developers often prefer to use simple text editors like **vim** or
+.. image:: images/emacsvim.png
+    :width: 30%
+
+But,... Python developers often prefer to use simple text editors like **vim** or
 **emacs**.
+
+.. note::
+    * With python/flask you are not forced to use a IDE like eclipse
+    * This is not always the case when working with other frameworks
 
 ----
 
-Developement Environment #2
-===========================
+
+Webserver included
+==================
+
+.. code:: python
+
+   if __name__ == '__main__':
+       app.run(host='localhost', port='4242')
 
 * Integrated development server 
 * Running on http://localhost:4242
 
-.. code:: python
+.. code:: bash
 
-   if __name__ == '__main__':
-       app.run(debug=True, port='4242')
+    $ python main.py
+    * Running on http://127.0.0.1:4242/ (Press CTRL+C to quit)
+    * Restarting with stat
 
-.. note:: No webserver needed for testing
+.. note:: 
+    * No webserver needed for testing
 
 
 ----
 
-Developement Environment #3
-===========================
+
+Debugger included
+=================
 
 * Integrated debugger console
-* Directly integrated http://localhost:4242
+* Directly integrated at http://localhost:4242
+
 
 .. code:: python
 
-   if __name__ == '__main__':
-       app.run(debug=True, port='4242')
+    @app.route('/<name>')
+    def name(name):
+        if name == 'ghost':
+            raise Exception('user not allowed.')
+        else:
+            return 'Hello {name}'.format(name=name)
+
+.. code:: bash
+    
+   $ curl localhost:5000/ghost
+   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/loose.dtd">
+   <html>
+     <head>
+       <title>Exception: user not allowed. // Werkzeug Debugger</title>
+       <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resour...
+    [...]
+
+.. note::
+    * If a exeption occurs, a interactive shell appears in your browser
 
 
-Testing
-=======
+----
+
+Debugger included
+=================
+
+.. image:: images/debug.png
+    :width: 100%
+
+----
+
+
+Unit Testing included
+=====================
  
 * Integrated unit testing support
-* Werkzeug test Client
+* Werkzeug test client
 
 .. code:: python
 
@@ -274,15 +394,63 @@ Testing
    if __name__ == '__main__':
        unittest.main()
 
+.. note:: 
+    * Unittests like in usual Python + there is a werkzeug test client
+
 ----
 
-Let's sum up
-============
+Let's sum up!
+=============
 
-Is Flask a suitable solution for a paper distribution platform?
+* **Pros**:
 
-* Highly extensible framework
-* Fast prototyping possible
-* Python is widely used among researchers
+* Flask:
 
-**Any questions?**
+  + Maximum flexibility by using extensions (Flask)
+  + 100% WSGI Compatible (Werkzeug)
+  + Powerful templating engine (Jinja 2)
+  + Fast prototyping language (Python)
+  + Debugger included
+  + Developement webserver/client included (Werkzeug)
+  + Security extensions
+
+* Python
+
+  + Batteries included (Python)
+  + Support for Google App Engine and Heroku
+  + Python is widely used among researchers
+  
+* You are free to choose your development environment
+* Complexity is stripped down to a minimum
+
+----
+
+Let's sum up!
+=============
+
+* **Cons**:
+
+  + Not as popular as Django
+  + Synchronous framework by nature
+  + No websockets included
+  + ,,Slow" interpreted language
+
+.. note::
+
+    Critical parts may be exchanged with Cython/C
+    There is socketio, autobahn, tornado to implement async behaviour
+
+----
+
+Thank you for your attention!
+=============================
+
+
+* Flask resources:
+
+    * Flask: http://flask.pocoo.org/
+    * Extensions:  http://flask.pocoo.org/extensions/
+    * Jinja 2: http://jinja.pocoo.org/
+    * Werkzeug: http://werkzeug.pocoo.org/
+
+* Pocoo Team is an international group of enthusiasts from the Python community.
