@@ -1,3 +1,4 @@
 all:
-	hovercraft presentation.rst /tmp/go/
-	google-chrome /tmp/go/index.html
+	rm /tmp/flask -rf
+	hovercraft presentation.rst /tmp/flask/
+	google-chrome /tmp/flask/index.html
