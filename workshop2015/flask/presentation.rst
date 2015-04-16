@@ -18,7 +18,7 @@
 
 .. note:: 
     * Welcome everbody
-    * Find out if Flask might be suitable 
+    * Today we want to find out if Flask might be suitable 
       for our paper deployment plattform
 
 ----
@@ -37,9 +37,8 @@ What is **Flask**?
 * Open Source (BSD License)
 
 .. note::
-    * Developer of Flask Armin Ronacher
-    * Started  as Project Denied, because of
-      huge user response, Flask was started
+    * Open Source Project started by Armin Ronacher
+    * Started as Project Denied (Aprils fool joke)
     * Just about 2500 lines of code
 
 ----
@@ -52,6 +51,7 @@ What does this **micro** mean? #1
     The idea of Flask is to build a good foundation for all 
     applications. Everything else is up to you or extensions.  
                                            -- Armin Ronacher
+
 * Based on Werkzeug WSGI toolkit 
 * Uses Jinja 2 template engine
 * Aims to extensible and well documented
@@ -66,7 +66,7 @@ What does this **micro** mean? #1
 
 .. note::
     * Flask only depends on Jinja2 and Werkzeug
-    * Werkzeug is a WSGI middleware wich acts between
+    * Werkzeug is a WSGI middleware acts between
       the Python application and the webserver
 
 ----
@@ -95,15 +95,13 @@ What does this **micro** mean? #2
 
   
 .. note:: 
-    * In Ruby on Rails or Django has it all included
+    * Django has a lot of stuff included
+    * Large Frameworks like Django are often overkill for small projekts
     * Flask just provides a simple core
 
-    * But thats a strength of Flask
-    * By using Flask the user has almost the full control 
-      of what is going on
+    * Its up to the user what should be included
+      + One Drop at a time philosophy -> Install just what you need
     * Extensible by using extensions and plugins
-    * Large Frameworks like Django are often overkill for small projekts
-    * One Drop at a time -> Install just what you need
 
 ----
 
@@ -136,9 +134,9 @@ Creating a page with less code.
     Hello Flask
 
 .. note::
-    * Decribe mapping route to function
-    * http methods
-    * tell about curl -> just TEXT output, not html!
+    * Route is mapped directly to a function 
+    * http methods, GET default
+    * Curl webresource retrival client -> just TEXT output, not html!
 
 ----
 
@@ -147,23 +145,23 @@ Templating Engine
 
 * Jinja 2 is the default templating engine
 
-    + Template Inheritance
+    + Supports template inheritance
     + Fast and flexible development
     + Can be easily exchanged
     
 * Can be combined with Bootstrap using Flask-Bootstrap
   
 .. note:: 
-   * Rendering templates in Python is not fun
-   * you have to care about proper html
-     excaping to keep your application secure
+   * You have to care about proper html excaping
+     to keep your application secure
+   * DRY philosopy -> Inheritance
 
 ----
 
 Jinja 2 Hello World
 ===================
 
-* Jinja 2 template:
+* Jinja 2 template (templates/greet.html):
 
 .. code:: html
 
@@ -219,9 +217,7 @@ Jinja 2 Hello World
            <h1>I am batman!</h1>
 
 .. note::
-    * By running curl with different names, our application
-      delivers different results, according to the code
-      of our Jinja 2 template
+    * Different names -> different results
 
 ----
 
@@ -243,7 +239,7 @@ Security
   + [...]
 
 * Jinja 2 proper HTML escaping to prevent XSS
-* KISS principle
+* KISS principle, less bug prone
 
 .. note:: 
     * Security by using extension
@@ -262,6 +258,7 @@ Yes there are IDE's and Plugins!
 * Eric
 * PyCharm
 * PyDev
+* ...
 
 .. image:: images/emacsvim.png
     :width: 30%
