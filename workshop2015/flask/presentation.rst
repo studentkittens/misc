@@ -223,8 +223,8 @@ Jinja 2 Hello World
 
 :id: security
 
-Security
-========
+Security aspects
+================
 
 .. image:: images/helmet.png
     :width: 20%
