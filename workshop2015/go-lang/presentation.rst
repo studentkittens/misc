@@ -6,13 +6,13 @@
 
 ----
 
+.. utility roles
+
 .. role:: underline
     :class: underline
 
 .. role:: blocky
    :class: blocky
-
-.. First slide
 
 :id: first 
 
@@ -41,17 +41,11 @@ Google Go
 
 .. note::
 
-    Disclaimer: I have no experience yet with go lang, I never came beyond the
-    tutorial. those points are rather why I'd love to learn it.
-
     <explain slide>
 
     does not allow weird formatting
 
     Poll: Anyone used go already for something?
-
-    Me neither that much, but I'd love to learn it.
-    At first, some facts:
 
     Current version: 1.4
     
@@ -61,7 +55,7 @@ Google Go
 + First seen *2009.* Stable 1.0 version in *2012*
 + Paradigms: parallel, imperative & object oriented.
 + Developed by *Ken thompson* and *Rob Pike* at *Google*.
-+ *Philosophy:* uniform code; employ best practices.
++ Strong & Static Duck typing; Garbage collected.
 + **Java** tries to be successor of **C++**.
 + **Go** a successor of **C**. 
 
@@ -165,11 +159,11 @@ In general, a lot of backend stuff:
        CutenessLevel int  // some other member
    }
 
-   func (c Cat) getName() string {
+   func (c Cat) getName() string {    // bound method
        return "Garfield"
    }
 
-   func greetAnimal(animal Animal) {
+   func greetAnimal(animal Animal) { // general  function
         fmt.Println("Hello, " + animal.getName())
    }
 
@@ -456,6 +450,7 @@ Summary - the downsides
 - Not so many **libraries** to chose from (yet).
 - No **Generics** (yet).
 - No **Exceptions**. *(\*)*
+- Googling for *,,go run''* yields not what you want. 
 
 (\* although replaced by ``defer`` and ``panic/recover``)
 
@@ -472,6 +467,8 @@ Summary - the downsides
 :id: fin
 
 .. note::
+
+    BOOK!
 
     If you really want to dive in Go, I can recommend those:
 

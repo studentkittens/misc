@@ -319,7 +319,7 @@ Debugger included
    <html>
      <head>
        <title>Exception: user not allowed. // Werkzeug Debugger</title>
-       <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resour...
+       <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resour..."
     [...]
 
 .. note::
@@ -379,12 +379,12 @@ Let's sum up!
   + Maximum flexibility by using extensions (Flask)
   + Powerful templating engine (Jinja 2)
   + Debugger and webserver/client included (Werkzeug)
+  + Support for Google App Engine and Heroku
   + Security 
 
 * Python
 
   + Batteries included (Python)
-  + Support for Google App Engine and Heroku
   + Python is widely used among researchers
   
 * You are free to choose your development environment
@@ -392,6 +392,7 @@ Let's sum up!
 
 .. note::
     * Python and Flask may be used with IPython Notebook
+
 ----
 
 Let's sum up!
