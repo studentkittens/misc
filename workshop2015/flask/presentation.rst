@@ -5,21 +5,10 @@
 :data-transition-duration: 500
 :css: presentation.css 
 
-Brainstorming:
-
-- Introduction to Flask
-- What is a Microwebframework? -> lightweight
-- Details of Flask Project
-- Hello World
-- Jinja Templating Engine, lots of plugins
-- Good for prototyping
-- If not enought go go!
-
 
 ----
 
 :id: first
-
 
 **10 Minutes** Introduction to
 ==============================
@@ -29,14 +18,12 @@ Brainstorming:
 
 .. note:: 
     * Welcome everbody
-    * Find out if Flask might be suitable 
+    * Today we want to find out if Flask might be suitable 
       for our paper deployment plattform
 
 ----
 
-
 :id: details 
-
 
 What is **Flask**?
 ==================
@@ -50,13 +37,11 @@ What is **Flask**?
 * Open Source (BSD License)
 
 .. note::
-    * Developer of Flask Armin Ronacher
-    * Started  as Project Denied, because of
-      huge user response, Flask was started
+    * Open Source Project started by Armin Ronacher
+    * Started as Project Denied (Aprils fool joke)
     * Just about 2500 lines of code
 
 ----
-
 
 What does this **micro** mean? #1
 =================================
@@ -71,19 +56,17 @@ What does this **micro** mean? #1
 * Uses Jinja 2 template engine
 * Aims to extensible and well documented
 
-
 .. image:: images/werkzeug.png
     :width: 20%
 
 .. image:: images/jinja2.png
     :width: 20%
 
-
 .. note: depends only on jinja 2 and werkzeug
 
 .. note::
     * Flask only depends on Jinja2 and Werkzeug
-    * Werkzeug is a WSGI middleware wich acts between
+    * Werkzeug is a WSGI middleware acts between
       the Python application and the webserver
 
 ----
@@ -110,22 +93,17 @@ What does this **micro** mean? #2
   + Flask-Cache
   + ...
 
-
-  
   
 .. note:: 
-    * In Ruby on Rails or Django has it all included
+    * Django has a lot of stuff included
+    * Large Frameworks like Django are often overkill for small projekts
     * Flask just provides a simple core
 
-    * But thats a strength of Flask
-    * By using Flask the user has almost the full control 
-      of what is going on
+    * Its up to the user what should be included
+      + One Drop at a time philosophy -> Install just what you need
     * Extensible by using extensions and plugins
-    * Large Frameworks like Django are often overkill for small projekts
-    * One Drop at a time -> Install just what you need
 
 ----
-
 
 Flask Hello World
 =================
@@ -144,7 +122,6 @@ Creating a page with less code.
     if __name__ == "__main__":
         app.run()
 
-
 .. code:: bash
 
     $ curl -i localhost:5000
@@ -157,36 +134,34 @@ Creating a page with less code.
     Hello Flask
 
 .. note::
-    * Decribe mapping route to function
-    * http methods
-    * tell about curl -> just TEXT output, not html!
+    * Route is mapped directly to a function 
+    * http methods, GET default
+    * Curl webresource retrival client -> just TEXT output, not html!
 
 ----
-
 
 Templating Engine
 =================
 
 * Jinja 2 is the default templating engine
 
-    + Template Inheritance
+    + Supports template inheritance
     + Fast and flexible development
     + Can be easily exchanged
     
 * Can be combined with Bootstrap using Flask-Bootstrap
   
 .. note:: 
-   * Rendering templates in Python is not fun
-   * you have to care about proper html
-     excaping to keep your application secure
+   * You have to care about proper html excaping
+     to keep your application secure
+   * DRY philosopy -> Inheritance
 
 ----
-
 
 Jinja 2 Hello World
 ===================
 
-* Jinja 2 template:
+* Jinja 2 template (templates/greet.html):
 
 .. code:: html
 
@@ -214,9 +189,7 @@ Jinja 2 Hello World
     * Jinja has different markers
     * Python code inside templates possible
 
-
 ----
-
 
 Jinja 2 Hello World
 ===================
@@ -235,7 +208,6 @@ Jinja 2 Hello World
     
        <h1>Pacman, watch out for ghosts! ᗧ ••• ᗣ •• </h1>
 
-
 .. code:: bash
 
    $ curl -i localhost:5000/greet/batman
@@ -245,17 +217,14 @@ Jinja 2 Hello World
            <h1>I am batman!</h1>
 
 .. note::
-    * By running curl with different names, our application
-      delivers different results, according to the code
-      of our Jinja 2 template
+    * Different names -> different results
 
 ----
 
-
 :id: security
 
-Security
-========
+Security aspects
+================
 
 .. image:: images/helmet.png
     :width: 20%
@@ -265,17 +234,17 @@ Security
   + Session based authentication
   + Role management
   + Password encryption
-  + Basic HTTP authentication
   + Token based authentication
   + User registration 
   + [...]
 
 * Jinja 2 proper HTML escaping to prevent XSS
+* KISS principle, less bug prone
 
 .. note:: 
-    * Various security modules
-    * KISS by default -> less bugs prone
+    * Security by using extension
     * Jinja2 enhanced security -> unix philosophy
+    * KISS principle -> less bugs prone
 
 ----
 
@@ -289,6 +258,7 @@ Yes there are IDE's and Plugins!
 * Eric
 * PyCharm
 * PyDev
+* ...
 
 .. image:: images/emacsvim.png
     :width: 30%
@@ -297,11 +267,11 @@ But,... Python developers often prefer to use simple text editors like **vim** o
 **emacs**.
 
 .. note::
-    * With python/flask you are not forced to use a IDE like eclipse
-    * This is not always the case when working with other frameworks
+    * You are not forced to use a IDE like eclipse
+    * This is not always the case when working with other frameworks, like Java
+      GWT/Dart
 
 ----
-
 
 Webserver included
 ==================
@@ -321,11 +291,9 @@ Webserver included
     * Restarting with stat
 
 .. note:: 
-    * No webserver needed for testing
-
+    * Testwebserver provided by Werkzeug
 
 ----
-
 
 Debugger included
 =================
@@ -351,23 +319,25 @@ Debugger included
    <html>
      <head>
        <title>Exception: user not allowed. // Werkzeug Debugger</title>
-       <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resour...
+       <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resour..."
     [...]
 
 .. note::
     * If a exeption occurs, a interactive shell appears in your browser
-
 
 ----
 
 Debugger included
 =================
 
+.. code:: bash
+    
+   $ curl localhost:5000/ghost
+
 .. image:: images/debug.png
     :width: 100%
 
 ----
-
 
 Unit Testing included
 =====================
@@ -407,21 +377,21 @@ Let's sum up!
 * Flask:
 
   + Maximum flexibility by using extensions (Flask)
-  + 100% WSGI Compatible (Werkzeug)
   + Powerful templating engine (Jinja 2)
-  + Fast prototyping language (Python)
-  + Debugger included
-  + Developement webserver/client included (Werkzeug)
-  + Security extensions
+  + Debugger and webserver/client included (Werkzeug)
+  + Support for Google App Engine and Heroku
+  + Security 
 
 * Python
 
   + Batteries included (Python)
-  + Support for Google App Engine and Heroku
   + Python is widely used among researchers
   
 * You are free to choose your development environment
 * Complexity is stripped down to a minimum
+
+.. note::
+    * Python and Flask may be used with IPython Notebook
 
 ----
 
