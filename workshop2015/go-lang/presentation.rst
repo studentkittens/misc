@@ -250,7 +250,7 @@ Go has no exceptions
 
    func processFile(srcName string)  {
        src, err := os.Open(srcName)
-       if err != nil {
+       if err != nil || !processFile(src) {
            return "oops, stuff did go wrong"
        }
        // … read src …
@@ -265,7 +265,7 @@ Using **Go**-idioms:
    func processFile(srcName string)  {
        src, err := os.Open(srcName)
        defer src.Close()
-       if err != nil {
+       if err != nil || !processFile(src) {
            panic("oops, stuff did go wrong")
        }
        // … read src …
