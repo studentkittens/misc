@@ -5,9 +5,9 @@
  *
  * MIT Licensed, see license.txt.
  *
- * Copyright 2012, 2013 impress-console contributors (see README.txt)
+ * Copyright 2012 impress-console contributors (see README.txt)
  *
- * version: 1.2-dev
+ * version: 1.1
  * 
  */
 
@@ -39,7 +39,7 @@
     // Default css location
     var cssFile = "css/impressConsole.css";
     
-    // All console windows, so that you can call impressConsole() repeatedly.
+    // All console windows, so that you can call console() repeatedly.
     var allConsoles = {};
     
     var useAMPM = false;
@@ -50,7 +50,7 @@
     };
     
     // The console object
-    var impressConsole = window.impressConsole = function (rootId) {
+    var console = window.console = function (rootId) {
 
         rootId = rootId || 'impress';
         
@@ -94,7 +94,7 @@
                 var slideSrc = baseURL + '#' + document.querySelector('.active').id;
                 var preSrc = baseURL + '#' + nextStep().id;
                 var slideView = consoleWindow.document.getElementById('slideView');
-                // Setting them when they are already set causes glithes in Firefox, so we check first:
+                // Setting them when they are already set causes glithes in firexof, so we check first:
                 if (slideView.src !== slideSrc) {
                     slideView.src = slideSrc;
                 }
@@ -128,7 +128,7 @@
                 var slideSrc = baseURL + '#' + document.querySelector('.active').id;
                 var preSrc = baseURL + '#' + nextStep().id;
                 var slideView = consoleWindow.document.getElementById('slideView');
-                // Setting them when they are already set causes glithes in Firefox, so we check first:
+                // Setting them when they are already set causes glithes in firexof, so we check first:
                 if (slideView.src !== slideSrc) {
                     slideView.src = slideSrc;
                 }
@@ -227,7 +227,7 @@
                 // Add clock tick
                 consoleWindow.timerStart = new Date();
                 consoleWindow.timerReset = timerReset;
-                consoleWindow.clockInterval = setInterval('impressConsole("' + rootId + '").clockTick()', 1000 );
+                consoleWindow.clockInterval = setInterval('console("' + rootId + '").clockTick()', 1000 );
                 
                 // keyboard navigation handlers
                 // 33: pg up, 37: left, 38: up

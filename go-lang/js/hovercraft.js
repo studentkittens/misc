@@ -3,12 +3,10 @@ impress().init();
 
 // Set up the help-box
 var helpdiv = window.document.getElementById('hovercraft-help');
-var footer = window.document.getElementById('footer');
 
 if (window.top!=window.self) {
     // This is inside an iframe, so don't show the help.
     helpdiv.className = "disabled";
-    footer.className = "disabled";
     
 } else {
     // Install a funtion to toggle help on and off.
@@ -18,7 +16,7 @@ if (window.top!=window.self) {
         else
             helpdiv.className = 'hide';    
     };
-    impressConsole().registerKeyEvent([72], help, window);
+    console().registerKeyEvent([72], help, window);
     
     // The help is by default shown. Hide it after five seconds.
     setTimeout(function () {
@@ -29,8 +27,8 @@ if (window.top!=window.self) {
 }
 
 
-if (impressConsole) {
-    impressConsole().init(cssFile='css/impressConsole.css');
+if (console) {
+    console().init(cssFile='css/impressConsole.css');
     
     var impressattrs = document.getElementById('impress').attributes
     if (impressattrs.hasOwnProperty('auto-console') && impressattrs['auto-console'].value.toLowerCase() === 'true') {

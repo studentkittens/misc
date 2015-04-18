@@ -1,6 +1,13 @@
-/* 
-   Unchanged from Hovercraft's default theme 
-   for easy updating
+/* This file left intentionally (almost) blank
+
+   Landslide always adds a print.css and a screen.css, but they
+   are not needed in impress.js, so this theme leaves them blank,
+   except for hiding some things you want to hide.
+   
+   You can modify these files in your own fork, or you can add
+   css-files in the landslide configuration file. 
+   See https://github.com/adamzap/landslide#presentation-configuration
+   
 */
 
 .impress-supported .fallback-message,
@@ -18,7 +25,7 @@
 #hovercraft-help {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
     color: #EEEEEE;
-    font-size: 100%;
+    font-size: 50%;
     left: 2em;
     bottom: 2em;
     width: 26em;
@@ -35,6 +42,10 @@
 .impress-enabled #hovercraft-help.hide {
     display: none;
 }
+
+/*.impress-enabled #hovercraft-help.show {*/
+    /*display: block;*/
+/*}*/
 
 #hovercraft-help.disabled {
     display: none;
