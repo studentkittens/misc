@@ -425,6 +425,9 @@ Summary - the upsides
 .. note::
 
     It has not yet the speed of C yet.
+    
+    Portable but not important for a backend.
+
     A bit like a nice and pleasant mixture of Python and C.
 
 
