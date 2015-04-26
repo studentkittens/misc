@@ -20,11 +20,11 @@
 
     Mention Gopher.
 
-.. image:: images/glenda.png
-   :width: 25%
+.. image:: images/gopherswrench.png
+   :width: 70%
    :align: left
 
-Google Go (2½!)
+Google Go 2½
 
 .. note::
 
@@ -42,7 +42,7 @@ Google Go (2½!)
 
 ----
 
-:blocky:`Was ist Go?`
+:blocky:`Was ist Go`
 
 .. note::
 
@@ -64,6 +64,51 @@ Google Go (2½!)
 
 .. image:: images/ken.png
    :align: center
+
+------
+
+:blocky:`Go Projekte`
+
+Bei genauerer Betrachtung schon einige: 
+
+- Google Doodles
+- Google App Engine
+- Youtube
+- Docker
+- Dropbox
+- ...
+
+Allgemein, viele Backendprojekte:
+
+.. image:: images/appengine.png
+   :align: left
+   :width: 15%
+
+.. image:: images/docker.png
+   :align: center
+   :width: 15%
+
+.. image:: images/doodle.png
+   :align: right
+   :width: 30%
+
+.. image:: images/dropbox.png
+   :align: right
+   :width: 15%
+
+.. image:: images/youtube.png
+   :align: right
+   :width: 20%
+
+.. note:: 
+
+    <explain slide>
+
+    I cannot give an tutorial, but I can show some of the special features of Go.
+
+    Go has also most of the constructs and datastructures most other imperative language have, but we'll focus on the weird bits. 
+
+    So let's start with...
 
 -----
 
@@ -109,43 +154,16 @@ Google Go (2½!)
 
 -----
 
-Stuff that's written in Go
-==========================
+:blocky:`Demo`
 
-*Not so much yet actually:*
+.. code-block:: bash
 
-- Google Doodles (*you seem them almost daily!*)
-- Google App Engine
-- Docker
-
-In general, a lot of backend stuff:
-
-.. image:: images/appengine.png
-   :align: left
-   :width: 20%
-
-.. image:: images/docker.png
-   :align: center
-   :width: 20%
-
-.. image:: images/doodle.png
-   :align: right
-   :width: 40%
-
-.. note:: 
-
-    <explain slide>
-
-    I cannot give an tutorial, but I can show some of the special features of Go.
-
-    Go has also most of the constructs and datastructures most other imperative language have, but we'll focus on the weird bits. 
-
-    So let's start with...
+   $ go help
 
 -----
 
-Eingebaute Datentypen
-=====================
+
+:blocky:`Datentypen`
 
 .. note::
 
@@ -156,6 +174,9 @@ Eingebaute Datentypen
     Unicode Variablen sind übrigens erlaubt.
     Kein up/downcasting wie in C/Java.
 
+    1. No pointer arithmetics or buffer overflows.
+    2. Strings are always *UTF-8*.
+
 **Primitive Datentypen:**
 
 .. code-block:: go
@@ -164,6 +185,7 @@ Eingebaute Datentypen
    Δtime := 42.0                // Kurzschreibweise (inferred)
    a, b, c := 1.0, 77, "Helmut" // Multiple Zuweisung
    var balance int = int(2.0)   // Explizite Konversion
+   var pb *int = &balance       // Pointer zu balance. (iiih!)
 
 **Maps:**
 
@@ -393,7 +415,7 @@ Bedingungslose ``switch`` als ``if/else`` Ersatz:
     - import durch vollen packagenamen, nutzung durch letzten teil. (fmt.Xy)
     - Mainmethode immer im package main.
 
-``tux.go``
+``$GOPATH/github.com/studentkittens/tux/tux.go``
 
 .. code-block:: go
 
@@ -403,7 +425,7 @@ Bedingungslose ``switch`` als ``if/else`` Ersatz:
         return "Tux"   
    }
 
-``main.go``
+``$GOPATH/main.go``
 
 .. code-block:: go
 
@@ -411,7 +433,7 @@ Bedingungslose ``switch`` als ``if/else`` Ersatz:
 
    import (
        "fmt"
-       "tux"
+       "github.com/studentkittens/tux"
    )
 
    func main() {
@@ -420,11 +442,44 @@ Bedingungslose ``switch`` als ``if/else`` Ersatz:
 
 -----
 
+:blocky:`Errors`
+
+.. note::
+
+    Es gibt auch noch panic + defer/recover.
+
+    Die sind aber mehr für ernste absolute unerwartete Fehler.
+
+    Die Beispiele sind sogar (fast) gleich lang!
+
+**Python:**
+
+.. code-block:: python
+
+   try:
+       with open('/nope', 'r') as fd:
+           print(fd.read())
+   except FileNotFoundError:
+       print('Dude?!')
+
+Das Gleiche in **Go**:
+
+.. code-block:: go
+
+    if fd, err := os.Open("/nope"); err == nil {
+        defer fd.Close()
+        fmt.Println(ioutil.ReadFile(fd))
+    } else {
+        fmt.Println("Dude?!")
+    }
+
+-----
+
 :class: heading
 
-:blocky:`Go is parallel`
+:blocky:`Goroutinen`
 
-… and parallel is easy with Go.
+Parallele **Go** Entsprechung eines **Python** Generator:
 
 .. note::
 
@@ -440,237 +495,51 @@ Bedingungslose ``switch`` als ``if/else`` Ersatz:
 
 .. code-block:: go
 
-    func main() {
-        for i := 0; i < 10; i++ {
-            go func(i int) {
-                fmt.Println(i)
-            }(i)
+    func fibonacci(n int, c chan int) {
+        x, y := 0, 1
+        for i := 0; i < n; i++ {
+            c <- y
+            x, y = y, x+y
         }
-        time.Sleep(1)  // crappy synchronization
+        close(c)
     }
 
+    func main() {
+        c := make(chan int, 10)
+        go fibonacci(100, c)
+        for i := range c {
+            fmt.Println(i)
+        }
+    }
 
 ------
 
-:class: heading
+:blocky:`select`
 
-:blocky:`Go is parallel`
-
-*Channels:*
+Ein simpler **Eventloop** in **Go**:
 
 .. code-block:: go
-
-    func echo(c chan int) {
-        for {
-            msg := <- c
-            fmt.Println(msg)
-        }
-    }
 
     func main() {
-        numbers := make(chan int)
-        go echo(numbers)
-        
-        for i := 0; i < 10; i++ {
-            numbers  <- i
+        tick := time.Tick(100 * time.Millisecond)
+        boom := time.After(500 * time.Millisecond)
+        for {
+            select {
+            case <-tick:
+                fmt.Println("tick.")
+            case <-boom:
+                fmt.Println("BOOM!")
+                return
+            default:
+                fmt.Println("    .")
+                time.Sleep(50 * time.Millisecond)
+            }
         }
     }
 
-.. note::
+------
 
-    Parallelism is built into the language itself. Communication also, no
-    special data structures needed (like asynchronous queues). 
-
------
-
-Go has no exceptions
-====================
-
-.. note::
-
-   <Spot the bug in the first code block>
-
-   defer can be used to delay function execution till the end.
-
-   even, if the function returns early or panics.
-
-*But it has* ``defer``. Spot the bug here:
-
-.. code-block:: go
-
-   func processFile(srcName string)  {
-       src, err := os.Open(srcName)
-       if err != nil || !processFile(src) {
-           return "oops, stuff did go wrong"
-       }
-       // … read src …
-       src.Close()
-       return "all cool."
-   }
-
-Using **Go**-idioms:
-
-.. code-block:: go
-
-   func processFile(srcName string)  {
-       src, err := os.Open(srcName)
-       defer src.Close()
-       if err != nil || !processFile(src) {
-           panic("oops, stuff did go wrong")
-       }
-       // … read src …
-       // … caller should call recover() on errors …
-    }
-
------
-
-Webframeworks
-=============
-
-*Quite some for a young language:*
-
-- Full scale web frameworks like *Beego* or *Revel*:
-- Lightweight alternatives like *Gorilla* or *Martini*.
-- Often it's enough to use *Gorilla* & the standard ``net/http``. *(\*)*
-- **Go** is supported well for *Google App Engine* and many other popular
-  cloud platforms like *Heroku*.
-
-.. image:: images/gorilla.png
-   :width: 20%
-   :align: left
-
-.. image:: images/beego.png
-   :width: 40%
-   :align: center
-
-.. image:: images/revel.png
-   :width: 30%
-   :align: right
-
-*(\* Websocket support included)*
-
-.. note::
-
-    Beego looks to be a full featured MVC framework, maybe on the same level as
-    Rails. It doesn’t make any attempts at being small. It has its own logging
-    library, ORM and Web frameworks.
-
-    <explain slide>
-
------
-
-Random Example: **Martini**
-===========================
-
-.. note::
-
-    A bit the Flask of the Go world.
-    A really lightweight framework.
-    Below is some real world go code.
-
-    <explain slide>
-
-.. code-block:: go
-
-   package main
-
-   import "github.com/go-martini/martini"
-
-   func main() {
-       m := martini.Classic()
-       m.Get("/hello/:name", func(params martini.Params) string {
-           return "Hello " + params["name"]
-       })
-       m.Run()
-   }
-
-*Running it:*
-
-.. code-block:: bash
-
-   $ curl http://localhost:3000/hello/world
-   Hello world
-
------
-
-Testing
-=======
-
-.. code-block:: go
-
-    func TestStupid(t *testing.T) {
-        if 1 + 1 != 2 {
-            t.Error("I shouldn't have gone out of bed.")
-        }
-    }
-
-    func BenchmarkStuff(b *testing.B) {
-        for i := 0; i < b.N; i++ { 
-            n = i * i / N  // whatever.
-        }
-    }
-
-Run with:
-
-.. code-block:: bash
-
-   $ go test 
-
-.. note::
-
-    You can have the test modules and benchmark functions directly
-    in the same module you have your code in.
-
--------
-
-Developer tools
-===============
-
-- All major IDEs are more or less supported.
-- But most go developers prefer to use a plain text editor.
-- Buildsystem, package manager, testing tool, lint checker and more is
-  integrated into the ``go`` command line tool. 
-- Just no text editor in there yet.
-
-.. note:: 
-
-    IDEs: Netbeans, Eclipse, IntelliJ, Vim
-
-    ``go`` tool makes most IDE features beyond code completion 
-    and syntax highlighting less useful.
-
-    Go shebang scripts
-
--------
-
-Security aspects
-================
-
-.. note:: 
-
-    Go is a programming language and you can't say "It's secure"#
-    out of the box. 
-
-    But the language learned from C in order to make less mistakes.
-
-    There are actually pointers
-
-    UTF-8, so programs have to handle broken encoding and do not silently 
-    produce bad results or even trigger exceptions in the program.
-
-    Every function go that can return an error should be checked.
-
-**Go** features that might help make secure applications:
-
-- No pointer arithmetics or buffer overflows.
-- Automatic garbage collection.
-- Strings are always *UTF-8*.
-- Error handling and exception handling is the same thing. 
-
--------
-
-Summary - the upsides
-=====================
+:blocky:`Pluspunkte`
 
 .. note::
 
@@ -680,32 +549,23 @@ Summary - the upsides
 
     A bit like a nice and pleasant mixture of Python and C.
 
-
-+ Very **fast** with little programming effort.
-+ **Parallel**: well suited for asynchronous backend tasks.
-+ Quite some **Webframeworks** and **Deployement** possibilities.
-+ **Compiles** blazingly fast.
-+ **Large** standard library (*Batteries included*)
-+ **Easy** to learn for **C**-Programmers.
-+ **Open Source** language (*BSD-Style*).
-
-*There is a concurrent web crawler at the end of the introduction tour:*
-
-It has about :underline:`60` lines of code as it's core.
++ Beinahe die Schnelligkeit von **C**...
++ ...kombiniert mit der Einfachheit von **Python**.
++ Große Standardlibrary (*Batteries included*, *Websockets!*)
++ Kompiliert schnell genug um als Skriptsprache zu dienen.
++ Viele gängige Werkzeuge sind Bestandteil der Sprache.
++ **Open Source** und von **Google** supported.
++ Einfaches Deployement. (*eine statische gelinkte Binary*)
 
 -----
 
-Summary - the downsides
-=======================
+:blocky:`Minuspunkte`
 
-- Not a very commonly **known** language yet.
-- Might be weird for programmers coming from e.g. **Java**.
-- Not so many **libraries** to chose from (yet).
-- No **Generics** (yet).
-- No **Exceptions**. *(\*)*
-- Googling for *,,go run''* yields not what you want. 
-
-(\* although replaced by ``defer`` and ``panic/recover``)
+- Ungewohnte Sprachsyntax, vor allem für **Java** Programmierer.
+- Einige fehlende Bibliotheken (*GObject*) noch nicht portiert.
+- Binaries sind ein bisschen groß (*2 MB per Hello World*)
+- (Noch) keine **Generics**. *(Nachteil?)*
+- Wenige Go-Programmierer auf dem Markt. (😃)
 
 .. note::
 
@@ -725,7 +585,7 @@ Summary - the downsides
 
     If you really want to dive in Go, I can recommend those:
 
-:blocky:`Last words`
+:blocky:`Letzte Worte`
 
     https://tour.golang.org/
 
@@ -734,4 +594,4 @@ Summary - the downsides
 |
 |
 
-**(Questions?)**
+**(Fragen?)**
