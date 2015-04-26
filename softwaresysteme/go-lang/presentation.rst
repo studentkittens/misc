@@ -36,10 +36,12 @@ Google Go
 
    Umfrage: Wer hat go gemacht seit dem letzten mal?
 
-   TODO: Agenda?
+   Wir werden die nächsten 40 Minuten etwas schneller reden.
+   
+   Das wird kein Go Tutorium, es geht uns eher drum dass ihr einfach mal 
+   so seht wie die Sprache so aussieht und wie man damit Probleme löst.
 
-   Wir werden die nächsten 40 Minuten etwas schneller reden, 
-   falls 
+   Neue Sprachen lernen erfordert leider immer noch Übung :)
 
    Das ist übrigens immer noch gopher. Wir mögen ihn auch immer noch.
    Er ist immer noch putzig.
@@ -122,23 +124,6 @@ Allgemein, viele Backendprojekte:
 
     - Kurz wirken lassen
     - Mix aus Python und C (typische Konstrukte zeigen: import etc)
-    - GOPATH einrichten, workspace einrichten.
-    
-    + mkdir ~/go
-    + export GOPATH=$HOME/go
-    + cd ~/go
-    + mkdir -p src/github.com/qitta/helloworld
-    + cd src/github.com/qitta/helloworld
-    + vim helloworld.go  # go fmt erwähnen, go def, autocompletion, go lint
-    + go install / go build
-    + Es kompiliert so schnell dass man es als Skriptsprache nehmen kann: go run
-    + export PATH=$PATH:$GOPATH/bin
-    + helloworld
-    + vim helloworld_test.go
-    + go test
-    + vim helloworld_test.go # benchmark schreiben
-    + go test -bench Add
-    + debugger: man kann den standard gdb verwenden.
 
 
 .. code-block:: go
@@ -159,6 +144,28 @@ Allgemein, viele Backendprojekte:
 -----
 
 :blocky:`Demo`
+
+.. note::
+
+    Tools: debugger, profiler, documentation tool, formatter, static analyzer,
+           build system, package manager... und compiler.
+
+    + GOPATH einrichten, workspace einrichten.
+    + mkdir ~/go
+    + export GOPATH=$HOME/go
+    + cd ~/go
+    + mkdir -p src/github.com/qitta/helloworld
+    + cd src/github.com/qitta/helloworld
+    + vim helloworld.go  # go fmt erwähnen, go def, autocompletion, go lint
+    + go install / go build
+    + Es kompiliert so schnell dass man es als Skriptsprache nehmen kann: go run
+    + export PATH=$PATH:$GOPATH/bin
+    + helloworld
+    + vim helloworld_test.go
+    + go test
+    + vim helloworld_test.go # benchmark schreiben
+    + go test -bench Add
+    + debugger: man kann den standard gdb verwenden.
 
 .. code-block:: bash
 
@@ -329,6 +336,32 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
        }
        returb a / b, a % b
    }
+
+-----
+
+:blocky:`Closures`
+
+.. note::
+
+    Python ähnliche Generatoren.
+
+.. code-block:: go
+
+    func fibonacciEngine() func() int {
+        f1, f2 := 0, 1
+        return func() int {
+            f2, f1 = f1 + f2, f2
+            return f1
+        }
+    }
+
+    func main() {
+        fib := fibonacciEngine()
+        for i := 0; i < 10; i++ {
+            fmt.Println(fib())
+        }
+    }
+
 
 -----
 
