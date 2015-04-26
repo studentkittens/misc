@@ -14,17 +14,21 @@
 .. role:: blocky
    :class: blocky
 
+.. role:: tiny
+   :class: tiny
+
 :id: first 
 
 .. note::
 
     Mention Gopher.
 
+Google Go
+:tiny:`(2½)`
+
 .. image:: images/gopherswrench.png
    :width: 70%
-   :align: left
-
-Google Go 2½
+   :align: center
 
 .. note::
 
@@ -76,7 +80,7 @@ Bei genauerer Betrachtung schon einige:
 - Youtube
 - Docker
 - Dropbox
-- ...
+- …
 
 Allgemein, viele Backendprojekte:
 
@@ -108,7 +112,7 @@ Allgemein, viele Backendprojekte:
 
     Go has also most of the constructs and datastructures most other imperative language have, but we'll focus on the weird bits. 
 
-    So let's start with...
+    So let's start with…
 
 -----
 
@@ -182,9 +186,9 @@ Allgemein, viele Backendprojekte:
 .. code-block:: go
 
    var name string = "Berta"    // Normale Schreibweise
-   Δtime := 42.0                // Kurzschreibweise (inferred)
+   time := 42.0                 // Kurzschreibweise (inferred)
    a, b, c := 1.0, 77, "Helmut" // Multiple Zuweisung
-   var balance int = int(2.0)   // Explizite Konversion
+   var Δbalance int = int(2.0)  // Explizite Konversion
    var pb *int = &balance       // Pointer zu balance. (iiih!)
 
 **Maps:**
@@ -198,7 +202,7 @@ Allgemein, viele Backendprojekte:
 
 .. code-block:: go
 
-   animals := [...]string{"cat", "moose", "owl"}  // Array
+   animals := […]string{"cat", "moose", "owl"}  // Array
    saneAnimals := animals[:2]                     // Slices
    fmt.Println(animals, saneAnimals)              
    /* ↦ [cat moose owl doves] [cat moose owl] */
@@ -245,7 +249,7 @@ Mit optionaler Kurzdeklaration:
         fmt.Printf("%s.", os)
     }
 
-Bedingungslose ``switch`` als ``if/else`` Ersatz:
+Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
 .. code-block:: go
     
@@ -351,7 +355,7 @@ Bedingungslose ``switch`` als ``if/else`` Ersatz:
    import "math"
 
    func Sqrt(x float64) float64 {
-       // ...?
+       // …?
    }
 
    func main() {
@@ -549,8 +553,8 @@ Ein simpler **Eventloop** in **Go**:
 
     A bit like a nice and pleasant mixture of Python and C.
 
-+ Beinahe die Schnelligkeit von **C**...
-+ ...kombiniert mit der Einfachheit von **Python**.
++ Beinahe die Schnelligkeit von **C**…
++ …kombiniert mit der Einfachheit von **Python**.
 + Große Standardlibrary (*Batteries included*, *Websockets!*)
 + Kompiliert schnell genug um als Skriptsprache zu dienen.
 + Viele gängige Werkzeuge sind Bestandteil der Sprache.
@@ -561,10 +565,10 @@ Ein simpler **Eventloop** in **Go**:
 
 :blocky:`Minuspunkte`
 
-- Ungewohnte Sprachsyntax, vor allem für **Java** Programmierer.
-- Einige fehlende Bibliotheken (*GObject*) noch nicht portiert.
+- Ungewohnte ⎯ vor allem für **Java** Programmierer.
+- Einige fehlende Bibliotheken (*GObject!*) noch nicht portiert.
 - Binaries sind ein bisschen groß (*2 MB per Hello World*)
-- (Noch) keine **Generics**. *(Nachteil?)*
+- Noch keine **Generics**. *(…Nachteil?)*
 - Keine Listcomprehensions. (😕)
 - Wenige Go-Programmierer auf dem Markt. (😃)
 
