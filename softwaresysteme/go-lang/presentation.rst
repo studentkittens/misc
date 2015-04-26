@@ -565,6 +565,7 @@ Ein simpler **Eventloop** in **Go**:
 - Einige fehlende Bibliotheken (*GObject*) noch nicht portiert.
 - Binaries sind ein bisschen groß (*2 MB per Hello World*)
 - (Noch) keine **Generics**. *(Nachteil?)*
+- Keine Listcomprehensions. (😕)
 - Wenige Go-Programmierer auf dem Markt. (😃)
 
 .. note::
