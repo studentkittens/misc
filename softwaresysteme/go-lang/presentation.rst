@@ -19,10 +19,6 @@
 
 :id: first 
 
-.. note::
-
-    Mention Gopher.
-
 Google Go
 :tiny:`(2½)`
 
