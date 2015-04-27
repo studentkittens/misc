@@ -60,6 +60,12 @@ div#first img {
     width: 6em
 }
 
+div#catlight img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em
+}
+
 div#fin {
     text-align: center;
 }

@@ -37,6 +37,15 @@ Google Go
    Umfrage: Wer hat go gemacht seit dem letzten mal?
 
    Wir werden die nächsten 40 Minuten etwas schneller reden.
+
+   Agenda:
+
+    * Einführung
+    * Überblick wie GO Entwicklung aussieht/Demo
+    * Spracheinführung
+    * Übung
+    * Go extended features
+    * Überraschung
    
    Das wird kein Go Tutorium, es geht uns eher drum dass ihr einfach mal 
    so seht wie die Sprache so aussieht und wie man damit Probleme löst.
@@ -52,26 +61,31 @@ Google Go
 
 .. note::
 
-    <explain slide>
-
-    does not allow weird formatting
-
-    Aktuelle Version: 1.4 (Dezemeber 2014)
-    
+    * Aktuelle Version: 1.4 (Dezemeber 2014)
+    * Drei haben Erfahrung mit Sprachdesign
+    * Go hat durchdachtes Design an vielen Ecken
 
 *Eine Programmiersprache.*
 
-+ Erster Release *2009.* Stable 1.0 version in *2012*
-+ Concurrent, imperativ & Object orientiert. 
++ Erster Release *2009.* Stable 1.0 version seit *2012*
++ Nebenläufig, imperativ & objektorientiert. 
 + Von *Ken Thompson*, *Rob Pike* & *Robert Griesemer*.
 + Strong & Static (Duck) typing; Garbage collected.
-+ **Java** tries to be successor of **C++**.
-+ **Go** a successor of **C**. 
+
+,, **Java** tries to be successor of **C++**.''
+
+,, **Go** a successor of **C**. ''
 
 .. image:: images/ken.png
    :align: center
 
 ------
+
+.. note::
+
+    * Nachbesserung zum letzten Mal -> doch viel Go im ,,backend''
+    * Dropbox -> Performancekritische sachen in Go
+    * Github, Youtube -> Backendinfrastruktur teile in Go
 
 :blocky:`Go Projekte`
 
@@ -106,25 +120,16 @@ Allgemein, viele Backendprojekte:
    :align: right
    :width: 20%
 
-.. note:: 
-
-    <explain slide>
-
-    I cannot give an tutorial, but I can show some of the special features of Go.
-
-    Go has also most of the constructs and datastructures most other imperative language have, but we'll focus on the weird bits. 
-
-    So let's start with…
-
 -----
 
-:blocky:`Hello world`
+:blocky:`Hello World`
 
-.. note::
+.. note:: 
 
-    - Kurz wirken lassen
-    - Mix aus Python und C (typische Konstrukte zeigen: import etc)
-
+   * Go sieht aus wie C von Python vergewaltigt
+   * Konstrukte beider Sprachen eingefloßen
+   * << Folie erklären >>
+   * <<< JETZT ERSTMAL SWITCH ZUR Nächste FOLIE >>>
 
 .. code-block:: go
 
@@ -147,20 +152,19 @@ Allgemein, viele Backendprojekte:
 
 .. note::
 
-    Tools: debugger, profiler, documentation tool, formatter, static analyzer,
-           build system, package manager... und compiler.
 
-    + GOPATH einrichten, workspace einrichten.
-    + mkdir ~/go
-    + export GOPATH=$HOME/go
-    + cd ~/go
+    + Jetzt werden wir praktische
+    + GOPATH zeigen, workspace zeigen 
+    + cd ~/go/bin/
     + mkdir -p src/github.com/qitta/helloworld
     + cd src/github.com/qitta/helloworld
+    + go tool (go help zeigen)
+    + Tools: debugger, profiler, documentation tool, formatter, static analyzer,
+           build system, package manager... und compiler.
     + vim helloworld.go  # go fmt erwähnen, go def, autocompletion, go lint
-    + go install / go build
+    + go install / go build/ go run
     + Es kompiliert so schnell dass man es als Skriptsprache nehmen kann: go run
-    + export PATH=$PATH:$GOPATH/bin
-    + helloworld
+    + ausführen helloworld
     + vim helloworld_test.go
     + go test
     + vim helloworld_test.go # benchmark schreiben
@@ -177,25 +181,29 @@ Allgemein, viele Backendprojekte:
 :blocky:`Datentypen`
 
 .. note::
+   
+    * <<< GO Playground googeln >>>
+    * Umgekehrte Typreihenfolge
+    * Standarddatentypen wie bei jeder anderen Programmiersprache.
+        (int, float, byte, rune, string).
 
-    Standarddatentypen wie bei jeder anderen Programmiersprache.
-    (int, float, byte, rune, string).
+    * Kurzschreibweise nur innerhalb Funktionen erlaubt.
+    * Unicode Bezeichner sind übrigens erlaubt.
+    * Kein up/downcasting wie in C/Java.
+    * Keine Pointerarithmetik
+    * Variablen immer definiert auf nil/0 etc
+    * Maps immer typisiert
+    * Interne Verarbeitung UTF8
 
-    Kurzschreibweise nur innerhalb Funktionen erlaubt.
-    Unicode Variablen sind übrigens erlaubt.
-    Kein up/downcasting wie in C/Java.
-
-    1. No pointer arithmetics or buffer overflows.
-    2. Strings are always *UTF-8*.
 
 **Primitive Datentypen:**
 
 .. code-block:: go
 
    var name string = "Berta"    // Normale Schreibweise
-   time := 42.0                 // Kurzschreibweise (inferred)
+   Δtime := 42.0                // Kurzschreibweise (inferred)
    a, b, c := 1.0, 77, "Helmut" // Multiple Zuweisung
-   var Δbalance int = int(2.0)  // Explizite Konversion
+   var balance int = int(2.0)   // Explizite Konversion
    var pb *int = &balance       // Pointer zu balance. (iiih!)
 
 **Maps:**
@@ -209,10 +217,10 @@ Allgemein, viele Backendprojekte:
 
 .. code-block:: go
 
-   animals := […]string{"cat", "moose", "owl"}  // Array
+   animals := [...]string{"cat", "moose", "owl"}  // Array
    saneAnimals := animals[:2]                     // Slices
    fmt.Println(animals, saneAnimals)              
-   /* ↦ [cat moose owl doves] [cat moose owl] */
+   /* ↦ [cat moose owl] [cat moose] */
 
 -----
 
@@ -220,14 +228,14 @@ Allgemein, viele Backendprojekte:
 
 .. note::
 
-    Entpspricht C meist
-
-    switch case als if/[else if]/else ersatz?
+    * Entpspricht C meist
+    * Unterschied: Kein Klammern () -> Go Blocks {}
+    * << Folie erklären >>
 
 .. code-block:: go
 
    if name == "wolfgang" {
-       fmt.Println("männlich.")
+       fmt.Println("vermutlich männlich.")
    }
 
 Mit optionaler Kurzdeklaration:
@@ -275,10 +283,11 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
 .. note::
 
-    Kein while loop, nur for. Auch for range.
-    Man kann alles weglassen.
+    * Kein Preinkrement
+    * Kein while loop, nur for. Auch for range.
+    * Man kann alles weglassen. -> Endlosschleife
 
-**Normales**   ``C for``
+**Normales**   ``C for``:
 
 .. code-block:: go
 
@@ -286,7 +295,7 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
        // …
    }
 
-``while``  **Schleife**
+``while``  **Schleife**:
 
 .. code-block:: go
 
@@ -296,7 +305,7 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
        }
    }
 
-``foreach`` **Schleife**
+``foreach`` **Schleife**:
 
 .. code-block:: go
 
@@ -309,10 +318,10 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 :blocky:`func`
 
 .. note::
-
-    Go hat keine Defaultparameter. Leider.
-
-    Man kann auch return values benennen und sie dadurch direkt setzen.
+   
+    * <<< Folie erklären >>>
+    * Go hat keine Defaultparameter. Leider.
+    * Man kann auch return values benennen und sie dadurch direkt setzen.
 
 .. code-block:: go
 
@@ -334,7 +343,7 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
        if b == 0 {
            return 0, 0, errors.New("divisor should not be 0")
        }
-       returb a / b, a % b
+       return a / b, a % b, nil
    }
 
 -----
@@ -343,7 +352,9 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
 .. note::
 
-    Python ähnliche Generatoren.
+   - Go unterstützt Higher Order Functions
+   - Closure = anonyme Funktion die auf Erstellungskontext zugreifen kann.
+   - Python ähnliche Generatoren.
 
 .. code-block:: go
 
@@ -367,9 +378,14 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
 .. note::
 
+    - Kommen wir zur ersten Aufgabe von 20 heute..
+    - 2-3 Minuten Pause.
+    - Zeit 5-10 Minuten, der erste bekommt Kekse!
     - Startwert für z auswählen (1.0)
     - Iterativ z berechnen, zurückgeben. (wieviel reichen denn aus?)
     - Plus: Iteration bei geringem Delta abbrechen.
+    - Name: Newtonsche Quadratwurzelannäherung
+    - Als nächstes Extended Features von Go
 
 :class: excercise1
 
@@ -377,8 +393,7 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
 .. image:: images/newton.png
 
-
-*Quadratwurzel iterativ selber berechnen:*
+*Quadratwurzel iterativ selber approximieren:*
 
 .. code-block:: go
    
@@ -406,16 +421,12 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
     <explain slide>
 
-    Interfaces: Sammlung von Methoden.
+    * In anderen Sprachen: Klassen, Objekte, Instanzen
+    * In Go: Typen, Interfaces (was sind Typen sind) und Values
+    * Interfaces: Sammlung von Methoden.
+    * Unterschied philsophischer Natur
+    * Duck typing Prinzip (wenn es sich wie ne Katze benutzt werden kann, ist es ne Katze)
 
-    Go is a statically and strong typed language.
-    But most of the time value types can be derived from the context
-    by the compiler. Types are divided into interfaces and structs. 
-    Every struct can be used by a certain interface as long all methods 
-    of this interface were implemented for a certain struct.
-
-    By the way, also note that type declaration is reversed in go, so the
-    variable name commes first, and the type name second.
 
 **Go** hat eigentlich keine Klassen oder Vererbung.
 
@@ -425,7 +436,7 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
        getName() string   // Interface-Anforderung
    }
 
-   type Cat struct {
+   type Cat struct {      
        Name string        // Membervariable
    }
 
@@ -483,11 +494,12 @@ Bedingungsloses ``switch`` als ``if/else`` Ersatz:
 
 .. note::
 
-    Es gibt auch noch panic + defer/recover.
-
-    Die sind aber mehr für ernste absolute unerwartete Fehler.
-
-    Die Beispiele sind sogar (fast) gleich lang!
+    - << Folie erklären >>
+    - defer erklären.
+    - Beispiele sind äquivalent. (Auch python context manager)
+    - Die Beispiele sind sogar (fast) gleich lang!
+    - Es gibt auch noch panic + defer/recover.
+    - Die sind aber mehr für ernste absolute unerwartete Fehler.
 
 **Python:**
 
@@ -520,13 +532,18 @@ Parallele **Go** Entsprechung eines **Python** Generator:
 
 .. note::
 
-    No conventional threads. 
-    Only goroutines and channels to communicate between them.
-    go routines can be seen as lightweight threads.
+   - Go ist eine Sprache wo parallele Programmierung sehr einfach ist, da in
+     Sprache eingebaut.
+   - Man kann einfach durch go func() Aufgaben *nebenläufig* starten. 
+   - Go routinen sind nicht nur nebenläufig sondern meist auch parallel... aber! achtung!
+   - Go hat einen eigenen Scheduler der die go routinen auf tatsächliche threads
+     aufteilt. Ob eine go routine tatsächlich parallel ist, ist ein
+     "Implementierungsdetail"
 
-    Go routines do not necessary have a thread behind them, that's
-    an implementation detail of go.
-
+    - Channels erklären, gepuffer, ungepuffert
+    - unterschied zu anderen sprachen: man benötigt eine threadlib und zB
+      AsyncQueues zur Kommunikation
+    - Folie erklären
 
 *Go routines:* 
 
@@ -553,6 +570,17 @@ Parallele **Go** Entsprechung eines **Python** Generator:
 
 :blocky:`select`
 
+.. note::
+
+    - In go kann man sich mit den eingebauten Mitteln sehr einfach einen
+      Eventloop bauen
+    - Ein Eventloop wird ja in der asynchronen programmierung genutzt um
+      bei auftreteten Ereignissen reagieren zu können. So können nichtblockend v
+      viele Ereignisse nebenläufig abgearbeitet werden.
+    - [Vergleich select mit socket-select bei linux]
+    - tick ist ein channel
+    - <<< folie erklären >>>
+
 Ein simpler **Eventloop** in **Go**:
 
 .. code-block:: go
@@ -578,45 +606,51 @@ Ein simpler **Eventloop** in **Go**:
 
 :blocky:`Pluspunkte`
 
-.. note::
-
-    It has not yet the speed of C yet.
-    
-    Portable but not important for a backend.
-
-    A bit like a nice and pleasant mixture of Python and C.
-
 + Beinahe die Schnelligkeit von **C**…
-+ …kombiniert mit der Einfachheit von **Python**.
-+ Große Standardlibrary (*Batteries included*, *Websockets!*)
-+ Kompiliert schnell genug um als Skriptsprache zu dienen.
-+ Viele gängige Werkzeuge sind Bestandteil der Sprache.
++ …kombiniert mit der Einfachheit und Kürze von **Python**.
++ Große Standardlibrary (**Batteries included**; *Websockets!*)
++ Kompiliert schnell genug um als **Skriptsprache** zu dienen.
++ Viele gängige **Werkzeuge** sind Bestandteil der Sprache.
 + **Open Source** und von **Google** supported.
-+ Einfaches Deployement. (*eine statische gelinkte Binary*)
++ Einfaches **Deployement**. (*eine statische gelinkte Binary*)
 
 -----
 
 
 .. note::
 
-    You dont find many programmers yet.
+    GObject -> Gtk und co.
 
-    people might feel the need for traditional OOP
-
-    Example: GTK is still missing for go and many special need libs
+    Viele Leute wollen Go wie ihre gewohnte Sprache benutzen.
+    Doofe Idee, aber Menschen sind halt Gewohnheitstiere.
 
     Man kann mit varargs optionale parameter faken.
 
 :blocky:`Minuspunkte`
 
 - Ungewohnte ⎯ vor allem für **Java** Programmierer.
-- Einige fehlende Bibliotheken (*GObject!*) noch nicht portiert.
-- Binaries sind ein bisschen groß (*~2 MB per HelloWorld*)
+- Einige **fehlende Bibliotheken** (*GObject!*) noch nicht portiert.
+- **Binaries** sind ein bisschen **groß** (*~2 MB per HelloWorld*)
 - Noch keine **Generics**. *(…Nachteil?)*
-- Keine *Listcomprehensions*. (😕)
-- Keine *Defaultparameter*. (😞)
-- Wenige Go-Programmierer auf dem Markt. (😃)
+- Keine **Listcomprehensions**. (😕)
+- Keine **Defaultparameter**. (😞)
+- Wenige Go-Programmierer auf dem **Markt**. (😃)
 
+------
+
+:id: catlight
+
+.. note:: 
+
+    - Wir haben euch auch noch ein kleines Beispiel mitgebracht
+    - Vorher: kleines Beispiel mit Martini
+    - Heute: Kleiner Webserver mit der standard net/http lib.
+
+:blocky:`Catlight Demo`
+
+.. image:: images/catlight.png
+
+**(...oder wie Gopher Licht ins Dunkel brachte)**
 
 -------
 
