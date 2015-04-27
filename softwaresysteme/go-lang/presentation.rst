@@ -596,14 +596,6 @@ Ein simpler **Eventloop** in **Go**:
 
 -----
 
-:blocky:`Minuspunkte`
-
-- Ungewohnte ⎯ vor allem für **Java** Programmierer.
-- Einige fehlende Bibliotheken (*GObject!*) noch nicht portiert.
-- Binaries sind ein bisschen groß (*2 MB per Hello World*)
-- Noch keine **Generics**. *(…Nachteil?)*
-- Keine Listcomprehensions. (😕)
-- Wenige Go-Programmierer auf dem Markt. (😃)
 
 .. note::
 
@@ -612,6 +604,19 @@ Ein simpler **Eventloop** in **Go**:
     people might feel the need for traditional OOP
 
     Example: GTK is still missing for go and many special need libs
+
+    Man kann mit varargs optionale parameter faken.
+
+:blocky:`Minuspunkte`
+
+- Ungewohnte ⎯ vor allem für **Java** Programmierer.
+- Einige fehlende Bibliotheken (*GObject!*) noch nicht portiert.
+- Binaries sind ein bisschen groß (*~2 MB per HelloWorld*)
+- Noch keine **Generics**. *(…Nachteil?)*
+- Keine *Listcomprehensions*. (😕)
+- Keine *Defaultparameter*. (😞)
+- Wenige Go-Programmierer auf dem Markt. (😃)
+
 
 -------
 
