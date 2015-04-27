@@ -628,7 +628,7 @@ Ein simpler **Eventloop** in **Go**:
 
 :blocky:`Minuspunkte`
 
-- Ungewohnte ⎯ vor allem für **Java** Programmierer.
+- Ungewohnt ⎯ vor allem für **Java** Programmierer.
 - Einige **fehlende Bibliotheken** (*GObject!*) noch nicht portiert.
 - **Binaries** sind ein bisschen **groß** (*~2 MB per HelloWorld*)
 - Noch keine **Generics**. *(…Nachteil?)*
