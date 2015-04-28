@@ -46,18 +46,12 @@ div.heading h1 {
 
 div#first {
     font-family: Sketch, Verdana, Helvetica, Arial, sans-serif;
-    font-size: 400%;
+    font-size: 350%;
     font-style: normal;
 }
 
 div#first p {
     float: right;
-}
-
-div#first img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 6em
 }
 
 div#fin {
@@ -77,19 +71,4 @@ strong {
 
 .underline {
     text-decoration: underline;
-}
-
-.right {
-    float: right;
-}
-
-.tiny {
-    font-family: Vollkorn, Verdana, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 42%;
-    vertical-align: super;
-}
-
-div.excercise1 img{
-    float: right;
 }
