@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title></title>
+
+<meta name="description" content="">    
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+<h1></h1>
+
+<p>
+<h4></h4>
+</p>
+</section>  
+
+
+<style type="text/css">
+    .reveal h1 { font-size: 2.0em; } 
+</style>
+<section id="section" class="level1">
+<h1></h1>
+<figure>
+<img src="docker-logo.png" />
+</figure>
+<p>© Christopher Pahl 2014 <br /> University of Applied Sciences Augsburg</p>
+</section>
+<section id="welcome" class="level1">
+<h1>Welcome!</h1>
+<p class="fragment" data-fragment-index="1">
+<b>Poll:</b> Who knows Virtualization/Sandboxing/Docker?
+</p>
+<p class="fragment" data-fragment-index="2">
+Presentation is less technical than usual.
+</p>
+<p class="fragment" data-fragment-index="3">
+But it's still technical. Sorry in advance.
+</p>
+<p class="fragment" data-fragment-index="4">
+Might be a bit linux centered. <br />
+<style>
+    .reveal section img { background:none; border:none; box-shadow:none; }
+</style>
+<img class="no_img_border" src="fedora-logo.png" height="250" width="250"/> <img class="no_img_border" src="tux.png" height="250" width="250"/> <img class="no_img_border" src="arch-linux.png" height="250" width="250"/>
+</p>
+<aside class="notes">
+<pre><code>Presentation is done in jovial tone.</code></pre>
+</aside>
+</section>
+<section id="docker-metadata" class="level1">
+<h1>Docker Metadata</h1>
+<ul>
+<li>Developed by <strong>dotCloud.com</strong> around 2013</li>
+<li>Written in the Go programming language</li>
+<li>Maintained by <strong>Docker Inc.</strong> now</li>
+<li>Lightweight tool for automated deployment.</li>
+<li>But useful for many other things!</li>
+</ul>
+<p><img src="gopher.png" width="300"/></p>
+</section>
+<section id="terms" class="level1">
+<h1>Terms</h1>
+<section id="deployment" class="level2">
+<h2>Deployment</h2>
+<p><code>Def:</code> The process of distributing software to client machines.</p>
+</section>
+<section id="sandboxing" class="level2">
+<h2>Sandboxing</h2>
+<p><code>Def:</code> Environment for application that provide limited resource access.</p>
+<aside class="notes">
+<pre><code>Before we actually start, there are some terms that need clarification.</code></pre>
+</aside>
+</section>
+<section id="virtualization" class="level2">
+<h2>Virtualization</h2>
+<p><code>Def:</code> Emulation of hardware through software in order to run a guest operating system on top of a host system.</p>
+</section>
+</section>
+<section id="how-deployment-was-done-around-1950" class="level1">
+<h1>How Deployment was done around 1950</h1>
+<aside class="notes">
+<pre><code>So, what happens if we&#39;re a company that has written some server side software,
+which needs to be installed on the client&#39;s hardware? Our software has many 
+dependencies, might rely on certain software versions of, for example, Apache.
+
+Certain dependencies might still have bugs.</code></pre>
+</aside>
+<p>Software deployment meant...</p>
+<p class="fragment" data-fragment-index="1">
+...to install the software on the clients hardware.
+</p>
+<p class="fragment" data-fragment-index="2">
+...to use the software's buildsystem.
+</p>
+<p class="fragment" data-fragment-index="3">
+...and to install it's dependencies.
+</p>
+<p class="fragment" data-fragment-index="4">
+...using the dependencie's buildsystems.
+</p>
+<p class="fragment" data-fragment-index="5">
+...fixing possible bugs on the client's platform.
+</p>
+<p class="fragment" data-fragment-index="6">
+...fixing possible dependencies bugs.
+</p>
+<p class="fragment" data-fragment-index="7">
+...paying treatment cost developer's burnout.
+</p>
+</section>
+<section id="a-bit-more-recent" class="level1">
+<h1>A bit more recent</h1>
+<p class="fragment" data-fragment-index="1">
+Hey, lets use virtualization for testing!
+</p>
+<p class="fragment" data-fragment-index="2">
+Simulate the clients environment in a virtual machine.
+</p>
+<p class="fragment" data-fragment-index="3">
+Test it in the VM, just copy the tested software over.
+</p>
+<p class="fragment" data-fragment-index="4">
+What if the clients environment changes?
+</p>
+</section>
+<section id="try-again" class="level1">
+<h1>Try again</h1>
+<p class="fragment" data-fragment-index="1">
+Hey, just lets ship the Virtual Machine Image!
+</p>
+<p class="fragment" data-fragment-index="2">
+Works.
+</p>
+<p class="fragment" data-fragment-index="3">
+But feels like an awful hack.
+</p>
+<p class="fragment" data-fragment-index="4">
+Deploying a 5GB+ VM image on every software update.
+</p>
+<p class="fragment" data-fragment-index="5">
+Seriously?
+</p>
+</section>
+<section id="docker-to-the-rescue" class="level1">
+<h1>Docker to the rescue</h1>
+<ul>
+<li>Containers and Images instead of Virtual Machines.</li>
+<li>Deploying the <code>diff</code> instead of the whole container.</li>
+<li>Base images for many popular linux distributions.</li>
+<li>New base images can be uploaded to <a href="https://hub.docker.com/">DockerHub</a>.</li>
+<li>Docker is the application engine that is able to run containers.</li>
+<li>Usually used completely from the commandline.</li>
+</ul>
+<aside class="notes">
+<pre><code>Docker knows Images too, but many containers can be spawned from the same 
+image. A container is just an actively running image with an application
+in it. On updates, only the diff is deployed, which is usually only a few MB large.</code></pre>
+</aside>
+</section>
+<section id="features" class="level1">
+<h1>Features</h1>
+<ul>
+<li>Very fast booting containers (same Kernel!)</li>
+<li>Containerized applications run sandboxed.</li>
+<li>Easy to pack own applications in containers.</li>
+<li>Support for creating own Images.</li>
+<li>Built-in versioning support.</li>
+<li>Divided in Daemon and Docker clients.</li>
+<li>Linking containers together.</li>
+<li>...</li>
+</ul>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+<figure>
+<img src="shipyard.png" alt="http://shipyard-project.com" /><figcaption>http://shipyard-project.com</figcaption>
+</figure>
+</section>
+<section id="technical-stuff" class="level1">
+<h1>Technical Stuff</h1>
+<ul>
+<li>Focus on processes, not on virtualizing operating systems.</li>
+<li>One process per container.</li>
+</ul>
+<section id="docker-builds-on-linux-features" class="level2">
+<h2>Docker builds on Linux features:</h2>
+<ul>
+<li><strong>cgroups:</strong> Grouping processes together.</li>
+<li><strong>namespaces:</strong> Separate processes in own namespaces.</li>
+<li><strong>aufs:</strong> Overlay file system.</li>
+</ul>
+</section>
+</section>
+<section id="section-2" class="level1">
+<h1></h1>
+<p><img src="docker-containers.png" alt="Two containers"/></p>
+</section>
+<section id="demonstration" class="level1">
+<h1>Demonstration</h1>
+<section id="hello-world" class="level2">
+<h2>Hello World</h2>
+<section>
+<pre><code class="bash">
+$ docker images
+$ docker run base/arch echo "hello augsburg."
+</code></pre>
+</section>
+<aside class="notes">
+<pre><code>Let&#39;s start with Hello world.
+Dockerd already runs.
+Notice how fast the container goes up.
+You always start from a base image, which 
+is usually just a normal stripped down linux distribution.</code></pre>
+</aside>
+</section>
+<section id="entering-a-container" class="level2">
+<h2>Entering a container</h2>
+<section>
+<pre><code class="bash">
+$ uname -a
+$ docker run -t -i base/arch /bin/bash
+> uname -a
+> pacman -Syy cowsay
+> cowsay "hello augsburg again."
+</code></pre>
+</section>
+</section>
+<section id="versioning-dockerhub" class="level2">
+<h2>Versioning &amp; DockerHub</h2>
+<section>
+<pre><code class="bash">
+$ docker ps
+$ docker diff 42cb46e2430f
+$ docker commit 42cb46e2430f sahib/cowsay_arch
+$ docker push sahib/cowsay_arch
+</code></pre>
+</section>
+<p>Container is now on <a href="https://hub.docker.com/">DockerHub</a>.</p>
+</section>
+</section>
+<section id="usecases" class="level1">
+<h1>Usecases</h1>
+<ul>
+<li>Deployment.</li>
+<li>Sandboxing applications.</li>
+<li>Testbed for application developement.</li>
+<li>Cluster Management with <code>CoreOS</code>.</li>
+<li>...</li>
+</ul>
+<aside class="notes">
+<pre><code>Personal usecase: running a self-written duplicate finder on / 
+System still working? No? Just restart the container.</code></pre>
+</aside>
+</section>
+<section id="section-3" class="level1">
+<h1></h1>
+<p><img src="core-os.png" alt="Two containers"/> <img src="core-os-logo.png" alt="Two containers"/></p>
+</section>
+<section id="so-docker-is-the-new-virtualization" class="level1">
+<h1>So, docker is <em>the new</em> virtualization?</h1>
+<p>Depends on your usecase.</p>
+<ul>
+<li>Still can only run Linux based containers.</li>
+<li>But it can run them on Windows/MacOSX using lightweight virtualization. (<code>boot2docker</code>).</li>
+<li>Microsoft has plans to port Docker fully to Windows.</li>
+<li>And even to use Windows as Image.</li>
+<li>What about GUI applications?</li>
+</ul>
+</section>
+<section id="section-4" class="level1">
+<h1></h1>
+<figure>
+<img src="docker-value.png" />
+</figure>
+</section>
+<section id="are-there-areas-where-virtualization-is-still-needed" class="level1">
+<h1>Are there areas where virtualization is still needed?</h1>
+<p>Yes.</p>
+<aside class="notes">
+<pre><code>Virtualization is still mightier.
+Docker is just an lightweight alternative in a lot of cases
+VMs are still useful for high availability and reliable
+Also if you need to run whole systems instead of separate applications</code></pre>
+</aside>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p><code>Docker on Wikipedia:</code></p>
+<p><a href="">http://en.wikipedia.org/wiki/Docker_(software)</a></p>
+<p><code>docker.com:</code></p>
+<p><a href="">https://docker.com</a></p>
+<p><code>coreos.com:</code></p>
+<p><a href="">https://coreos.com</a></p>
+</section>
+<section id="thank-you-for-your-attention" class="level1">
+<h1>Thank you for your attention</h1>
+<p>(<em>Hooray, school's out!</em>)</p>
+<section id="questions" class="level2">
+<h2>Questions?</h2>
+</section>
+</section>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: false,
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'beige', 
+  
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+  
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+  });
+
+</script>
+
+</body>
+</html>
