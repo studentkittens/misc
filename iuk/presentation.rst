@@ -259,13 +259,16 @@ Mögliche Einnahmequellen, durch…
    :align: center
 
 .. image:: images/yubi.png
-   :width: 20%
+   :width: 30%
    :align: center
 
 .. image:: images/nas.png
-   :width: 25%
+   :width: 35%
    :align: center
 
+.. image:: images/schiffe.jpg
+   :width: 15%
+   :align: right
 
 ---- 
 
