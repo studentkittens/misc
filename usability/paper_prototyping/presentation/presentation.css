@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+@font-face {
+    font-family: "Vollkorn";
+    src: url("fonts/Vollkorn-Regular.ttf"),
+    url("fonts/Vollkorn-BoldItalic.ttf"),
+    url("fonts/Vollkorn-Bold.ttf"),
+    url("fonts/Vollkorn-Italic.ttf"),
+    url("fonts/Vollkorn-MediumItalic.ttf"),
+    url("fonts/Vollkorn-Medium.ttf"),
+    url("fonts/Vollkorn-Regular.ttf"),
+    url("fonts/Vollkorn-SemiboldItalic.ttf"),
+    url("fonts/Vollkorn-Semibold.ttf");
+}
+
+@font-face {
+    font-family: 'Sketch';
+    src: url('fonts/sketch_block-webfont.eot');
+    src: url('fonts/sketch_block-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sketch_block-webfont.woff2') format('woff2'),
+         url('fonts/sketch_block-webfont.woff') format('woff'),
+         url('fonts/sketch_block-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('fonts/LibreBaskerville-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    font-style: normal;
+    font-weight: 320;
+    src: url('fonts/Satisfy-Regular.woff2'); format('woff2')
+}
+
+body {
+    background-color: #fdf6e3;
+    font-size: 200%;
+    margin-left: 10px;
+}
+
+div.heading h1 {
+    font-family: Libre Baskerville, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 260%;
+    font-style: normal;
+    margin-top: -42px;
+}
+
+
+div#first {
+    font-family: Libre Baskerville, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 150%;
+    font-style: normal;
+}
+
+
+div#first p {
+    float: left;
+    margin-top: -100px;
+    margin-right: -1px;
+}
+
+div#first img {
+    float: left;
+    margin-left: 1px;
+    margin-right: -50px;
+    width: 20em
+}
+
+.paperproto {
+    font-family: Sketch, Libre Baskerville, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 200%;
+    font-style: normal;
+}
+
+
+div#catlight img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em
+}
+
+div#fin {
+    text-align: center;
+}
+
+.blocky {
+    font-family: Baskerville, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 200%;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blocky2 {
+    font-family: Baskerville, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 200%;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+strong {
+    font-family: Vollkorn;
+    font-size: 110%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.right {
+    float: right;
+}
+
+.tiny {
+    font-family: Vollkorn, Verdana, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    vertical-align: super;
+}
+
+div.excercise1 img{
+    float: right;
+}
