@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="280"
+   height="280"
+   id="svg11709"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="switches.svg">
+  <defs
+     id="defs11711" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="57.666737"
+     inkscape:cy="87.795668"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1410"
+     inkscape:window-height="874"
+     inkscape:window-x="234"
+     inkscape:window-y="144"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata11714">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-772.36218)">
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       style="display:inline;fill:#f4f4f2;fill-opacity:1;stroke:#bdbfbd;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14238"
+       width="94"
+       height="25"
+       x="145.5"
+       y="879.86218"
+       rx="2"
+       ry="2" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       style="display:inline;fill:#f4f4f2;fill-opacity:1;stroke:#bdbfbd;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14240"
+       width="45"
+       height="25"
+       x="145.5"
+       y="879.86218"
+       rx="2"
+       ry="2" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.14816952px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.3;fill:#2e3436;fill-opacity:1;stroke:none"
+       x="199.06638"
+       y="907.4978"
+       id="text14242"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0113976,0.98873084)"><tspan
+         sodipodi:role="line"
+         id="tspan14244"
+         x="199.06638"
+         y="907.4978">OFF</tspan></text>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       ry="2"
+       rx="2"
+       y="919.86218"
+       x="145.5"
+       height="25"
+       width="94"
+       id="rect14246"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#f4f4f2;fill-opacity:1;fill-rule:nonzero;stroke:#bdbfbd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       transform="scale(1.0113976,0.98873084)"
+       sodipodi:linespacing="125%"
+       id="text14248"
+       y="947.55127"
+       x="157.53903"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.14816952px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         y="947.55127"
+         x="157.53903"
+         id="tspan14250"
+         sodipodi:role="line">ON</tspan></text>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       ry="2"
+       rx="2"
+       y="879.86218"
+       x="39.5"
+       height="25"
+       width="94"
+       id="rect14252"
+       style="display:inline;fill:#dbdbdb;fill-opacity:1;stroke:#919191;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       ry="2"
+       rx="2"
+       y="879.86218"
+       x="39.5"
+       height="25"
+       width="45"
+       id="rect14254"
+       style="display:inline;fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       transform="scale(1.0113976,0.98873084)"
+       sodipodi:linespacing="125%"
+       id="text14256"
+       y="907.4978"
+       x="94.260704"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.14816952px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="907.4978"
+         x="94.260704"
+         id="tspan14258"
+         sodipodi:role="line">OFF</tspan></text>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       style="display:inline;fill:#4a90d9;fill-opacity:1;stroke:#1c5288;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14262"
+       width="94"
+       height="25"
+       x="39.5"
+       y="919.86218"
+       rx="2"
+       ry="2" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       style="display:inline;fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14264"
+       width="45"
+       height="25"
+       x="88.5"
+       y="919.86218"
+       rx="2"
+       ry="2" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.14816952px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+       x="52.733852"
+       y="947.95361"
+       id="text14266"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0113976,0.98873084)"><tspan
+         sodipodi:role="line"
+         id="tspan14268"
+         x="52.733852"
+         y="947.95361">ON</tspan></text>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       ry="2"
+       rx="2"
+       y="919.86218"
+       x="194.5"
+       height="25"
+       width="45"
+       id="rect14270"
+       style="display:inline;fill:#f4f4f2;fill-opacity:1;stroke:#bdbfbd;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

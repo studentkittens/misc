@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="880"
+   height="470"
+   id="svg17288"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="label-alignment.svg">
+  <defs
+     id="defs17290" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="670.86193"
+     inkscape:cy="208.02452"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1136"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata17293">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-145,-287.375)">
+    <rect
+       mask="none"
+       style="fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:0.99999982;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect17085"
+       width="393"
+       height="186"
+       x="178.5"
+       y="318.86218"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#eaeaea;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect17087"
+       width="219"
+       height="33"
+       x="339.5"
+       y="333.86218"
+       rx="3.0000002"
+       ry="3"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:new"
+       id="rect17089"
+       width="219"
+       height="30.999998"
+       x="339.5"
+       y="374.86218"
+       rx="3.8039246"
+       ry="3.8039243"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       sodipodi:linespacing="125%"
+       id="text17091"
+       y="355.22791"
+       x="193.06473"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="355.22791"
+         x="193.06473"
+         id="tspan17093"
+         sodipodi:role="line">Special Type Selector</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       x="193.06473"
+       y="395.22791"
+       id="text17095"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan17097"
+         x="193.06473"
+         y="395.22791">Identifier</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       sodipodi:linespacing="125%"
+       id="text17099"
+       y="435.22791"
+       x="193.06473"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="435.22791"
+         x="193.06473"
+         id="tspan17101"
+         sodipodi:role="line">Speed</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       ry="1.6451885"
+       rx="1.427389"
+       y="-432.93481"
+       x="339.5"
+       height="2.9999974"
+       width="219"
+       id="rect17103"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;stroke:#3465a4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;filter:url(#filter12000-4-9-2);enable-background:new"
+       id="rect17105"
+       width="60.750004"
+       height="3"
+       x="339.53516"
+       y="429.87231"
+       rx="1.59375"
+       ry="1.59375"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <circle
+       r="7.9273763"
+       cy="430.93481"
+       cx="405.21674"
+       id="path17107"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#eaeaea;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       x="193.06473"
+       y="477.25281"
+       id="text17109"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan17111"
+         x="193.06473"
+         y="477.25281">Flux Capacitor</tspan></text>
+    <rect
+       ry="2"
+       rx="2"
+       y="459.86221"
+       x="339.5"
+       height="25"
+       width="94"
+       id="rect17115"
+       style="display:inline;fill:#4a90d9;fill-opacity:1;stroke:#1c5288;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       ry="2"
+       rx="2"
+       y="459.86221"
+       x="388.5"
+       height="25"
+       width="45"
+       id="rect17117"
+       style="display:inline;fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       transform="scale(1.0113976,0.98873084)"
+       sodipodi:linespacing="125%"
+       id="text17119"
+       y="482.71069"
+       x="349.35309"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.14816952px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="482.71069"
+         x="349.35309"
+         id="tspan17121"
+         sodipodi:role="line">ON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+       x="351.21881"
+       y="355.22791"
+       id="text17123"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan17125"
+         x="351.21881"
+         y="355.22791">Type 1</tspan></text>
+    <g
+       style="fill:#2e3436"
+       transform="translate(533,342.42468)"
+       id="g17127"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         id="g17129"
+         inkscape:label="status"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g17131"
+         inkscape:label="devices"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         style="fill:#2e3436"
+         id="g17133"
+         inkscape:label="apps"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g17135"
+         inkscape:label="places"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         style="fill:#2e3436"
+         id="g17137"
+         inkscape:label="mimetypes"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g17139"
+         inkscape:label="emblems"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g17141"
+         inkscape:label="emotes"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g17143"
+         inkscape:label="categories"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g17145"
+         inkscape:label="actions"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 354.0002,812.93751 -5,5 -5,-5 z"
+           id="path17147"
+           sodipodi:nodetypes="cccc"
+           style="fill:#2e3436;fill-opacity:1;stroke:none" />
+      </g>
+    </g>
+    <rect
+       mask="none"
+       style="fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:0.99999982;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4264"
+       width="393"
+       height="186"
+       x="178.5"
+       y="540.86218"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#eaeaea;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect4266"
+       width="219"
+       height="33"
+       x="339.5"
+       y="555.86218"
+       rx="3.0000002"
+       ry="3"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:new"
+       id="rect4268"
+       width="219"
+       height="30.999998"
+       x="339.5"
+       y="596.86218"
+       rx="3.8039246"
+       ry="3.8039243"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       sodipodi:linespacing="125%"
+       id="text4270"
+       y="577.22791"
+       x="328.21649"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="577.22791"
+         x="328.21649"
+         id="tspan4272"
+         sodipodi:role="line">Special Type Selector</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       x="328.21649"
+       y="617.22791"
+       id="text4274"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4276"
+         x="328.21649"
+         y="617.22791">Identifier</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       sodipodi:linespacing="125%"
+       id="text4278"
+       y="657.22791"
+       x="328.21649"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="657.22791"
+         x="328.21649"
+         id="tspan4280"
+         sodipodi:role="line">Speed</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       ry="1.6451885"
+       rx="1.427389"
+       y="-654.93481"
+       x="339.5"
+       height="2.9999974"
+       width="219"
+       id="rect4282"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;stroke:#1c5288;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;filter:url(#filter12000-4-9-2);enable-background:new"
+       id="rect4284"
+       width="60.750004"
+       height="3"
+       x="339.53516"
+       y="651.87231"
+       rx="1.59375"
+       ry="1.59375"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <circle
+       r="7.9273763"
+       cy="652.93481"
+       cx="405.21674"
+       id="path4286"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#eaeaea;fill-opacity:1;fill-rule:nonzero;stroke:#919191;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       x="328.21649"
+       y="699.25281"
+       id="text4288"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4290"
+         x="328.21649"
+         y="699.25281">Flux Capacitor</tspan></text>
+    <rect
+       ry="2"
+       rx="2"
+       y="681.86218"
+       x="339.5"
+       height="25"
+       width="94"
+       id="rect4294"
+       style="display:inline;fill:#4a90d9;fill-opacity:1;stroke:#1c5288;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       ry="2"
+       rx="2"
+       y="681.86218"
+       x="388.5"
+       height="25"
+       width="45"
+       id="rect4296"
+       style="display:inline;fill:#eaeaea;fill-opacity:1;stroke:#777b7a;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       transform="scale(1.0113976,0.98873084)"
+       sodipodi:linespacing="125%"
+       id="text4298"
+       y="707.24097"
+       x="349.35312"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.14816952px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/switches.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="707.24097"
+         x="349.35312"
+         id="tspan4300"
+         sodipodi:role="line">ON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+       x="351.21881"
+       y="577.22791"
+       id="text4302"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4304"
+         x="351.21881"
+         y="577.22791">Type 1</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       style="fill:#2e3436"
+       transform="translate(533,564.42469)"
+       id="g4306">
+      <g
+         id="g4308"
+         inkscape:label="status"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g4310"
+         inkscape:label="devices"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         style="fill:#2e3436"
+         id="g4312"
+         inkscape:label="apps"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g4314"
+         inkscape:label="places"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         style="fill:#2e3436"
+         id="g4316"
+         inkscape:label="mimetypes"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g4318"
+         inkscape:label="emblems"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g4320"
+         inkscape:label="emotes"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g4322"
+         inkscape:label="categories"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)" />
+      <g
+         id="g4324"
+         inkscape:label="actions"
+         style="display:inline;fill:#2e3436"
+         transform="translate(-341.0002,-807.00001)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 354.0002,812.93751 -5,5 -5,-5 z"
+           id="path4326"
+           sodipodi:nodetypes="cccc"
+           style="fill:#2e3436;fill-opacity:1;stroke:none" />
+      </g>
+    </g>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       y="318.86218"
+       x="594.5"
+       height="186"
+       width="393"
+       id="rect4529"
+       style="fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:0.99999982;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       mask="none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:179.99999523%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       x="613.21881"
+       y="353.22791"
+       id="text4535"
+       sodipodi:linespacing="180%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="613.21881"
+         y="353.22791"
+         id="tspan4673">Aperture</tspan><tspan
+         sodipodi:role="line"
+         x="613.21881"
+         y="378.9679"
+         id="tspan4688">Exposure Time</tspan><tspan
+         sodipodi:role="line"
+         x="613.21881"
+         y="404.70792"
+         id="tspan4690">ISO Speed Rating</tspan><tspan
+         sodipodi:role="line"
+         x="613.21881"
+         y="430.44791"
+         id="tspan4692">Focal Length</tspan><tspan
+         sodipodi:role="line"
+         x="613.21881"
+         y="456.1879"
+         id="tspan4694">Flash</tspan><tspan
+         sodipodi:role="line"
+         x="613.21881"
+         y="481.92792"
+         id="tspan4696">Subject Distance Range</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       sodipodi:linespacing="180%"
+       id="text4698"
+       y="353.22791"
+       x="773.21881"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:179.99999523%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan4700"
+         y="353.22791"
+         x="773.21881"
+         sodipodi:role="line">f/2.8</tspan><tspan
+         id="tspan4702"
+         y="378.9679"
+         x="773.21881"
+         sodipodi:role="line">1/4000</tspan><tspan
+         id="tspan4704"
+         y="404.70792"
+         x="773.21881"
+         sodipodi:role="line">400</tspan><tspan
+         id="tspan4706"
+         y="430.44791"
+         x="773.21881"
+         sodipodi:role="line">60</tspan><tspan
+         id="tspan4708"
+         y="456.1879"
+         x="773.21881"
+         sodipodi:role="line">Flash did not fire</tspan><tspan
+         id="tspan4710"
+         y="481.92792"
+         x="773.21881"
+         sodipodi:role="line">Close view</tspan></text>
+    <rect
+       mask="none"
+       style="fill:#eaeaea;fill-opacity:1;stroke:#919191;stroke-width:0.99999982;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4732"
+       width="393"
+       height="186"
+       x="594.5"
+       y="540.875"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       sodipodi:linespacing="180%"
+       id="text4734"
+       y="575.24072"
+       x="759.4964"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:179.99999523%;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#888a85;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan4736"
+         y="575.24072"
+         x="759.4964"
+         sodipodi:role="line">Aperture</tspan><tspan
+         id="tspan4738"
+         y="600.98071"
+         x="759.4964"
+         sodipodi:role="line">Exposure Time</tspan><tspan
+         id="tspan4740"
+         y="626.7207"
+         x="759.4964"
+         sodipodi:role="line">ISO Speed Rating</tspan><tspan
+         id="tspan4742"
+         y="652.46069"
+         x="759.4964"
+         sodipodi:role="line">Focal Length</tspan><tspan
+         id="tspan4744"
+         y="678.20074"
+         x="759.4964"
+         sodipodi:role="line">Flash</tspan><tspan
+         id="tspan4746"
+         y="703.94073"
+         x="759.4964"
+         sodipodi:role="line">Subject Distance Range</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:179.99999523%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+       x="773.21881"
+       y="575.24072"
+       id="text4748"
+       sodipodi:linespacing="180%"
+       inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/label-alignment.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="773.21881"
+         y="575.24072"
+         id="tspan4750">f/2.8</tspan><tspan
+         sodipodi:role="line"
+         x="773.21881"
+         y="600.98071"
+         id="tspan4752">1/4000</tspan><tspan
+         sodipodi:role="line"
+         x="773.21881"
+         y="626.7207"
+         id="tspan4754">400</tspan><tspan
+         sodipodi:role="line"
+         x="773.21881"
+         y="652.46069"
+         id="tspan4756">60</tspan><tspan
+         sodipodi:role="line"
+         x="773.21881"
+         y="678.20074"
+         id="tspan4758">Flash did not fire</tspan><tspan
+         sodipodi:role="line"
+         x="773.21881"
+         y="703.94073"
+         id="tspan4760">Close view</tspan></text>
+  </g>
+</svg>

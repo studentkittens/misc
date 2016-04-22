@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+
+            .box {
+                border-radius: 0px;
+                float: left;
+                width: 63.2px;
+                height: 64px;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>CATLIGHT</h1></center>
+        {{range $index, $e := . }}
+        <a href="/rgb/{{ $e.R }}/{{ $e.G }}/{{ $e.B }}">
+            <div class="box" style="background-color: rgb({{ $e.R }}, {{ $e.G }}, {{ $e.B }})">
+            </div>
+            </a>
+        {{ end }}
+    </body>
+</html>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="280"
+   height="280"
+   id="svg11709"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="drop-down-list.svg">
+  <defs
+     id="defs11711" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="44.192205"
+     inkscape:cy="52.306859"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1410"
+     inkscape:window-height="874"
+     inkscape:window-x="234"
+     inkscape:window-y="144"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4344" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata11714">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-772.36218)">
+    <g
+       id="g4424"
+       transform="translate(0,14.99998)">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/lapo.fedora/SparkleShare/gnome-mockups/content selection/content-selection.png"
+         ry="3"
+         rx="3.0000002"
+         y="780.86218"
+         x="56.999989"
+         height="33"
+         width="163.99976"
+         id="rect13280"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#dbdbdb;fill-opacity:1;fill-rule:nonzero;stroke:#a7a7a7;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+         x="70.892075"
+         y="802.25281"
+         id="text13282"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/home/lapo.fedora/SparkleShare/gnome-mockups/content selection/content-selection.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           sodipodi:role="line"
+           id="tspan13284"
+           x="70.892075"
+           y="802.25281">English</tspan></text>
+      <g
+         id="g13286"
+         transform="translate(192.4995,789.4246)"
+         style="fill:#2e3436">
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="status"
+           id="g13288" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="devices"
+           id="g13290" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           inkscape:label="apps"
+           id="g13292"
+           style="fill:#2e3436" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="places"
+           id="g13294" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           inkscape:label="mimetypes"
+           id="g13296"
+           style="fill:#2e3436" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="emblems"
+           id="g13298" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="emotes"
+           id="g13300" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="categories"
+           id="g13302" />
+        <g
+           transform="translate(-341.0002,-807.00001)"
+           style="display:inline;fill:#2e3436"
+           inkscape:label="actions"
+           id="g13304">
+          <path
+             style="fill:#2e3436;fill-opacity:1;stroke:none"
+             sodipodi:nodetypes="cccc"
+             id="path13306"
+             d="m 354.0002,812.93751 -5,5 -5,-5 z"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+      <path
+         sodipodi:nodetypes="scccssssssss"
+         inkscape:connector-curvature="0"
+         id="path13308"
+         d="m 29.5,830.8622 94,0 14,-12 14,12 98,0 c 3.324,0 6,2.676 6,6 l 0,170 c 0,3.324 -2.676,6 -6,6 l -220,0 c -3.324,0 -6,-2.676 -6,-6 l 0,-170 c 0,-3.324 2.676,-6 6,-6 z"
+         style="fill:#f2f2f2;fill-opacity:1;stroke:#babdb6;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="844.86194"
+         x="35.5"
+         height="156"
+         width="208.64844"
+         id="rect13310"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#babdb6;stroke-width:0.99999988;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path13312"
+         d="m 35.5,883.8622 209,0"
+         style="display:inline;fill:none;stroke:#babdb6;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+         x="50.787598"
+         y="908.23816"
+         id="text13314"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           sodipodi:role="line"
+           id="tspan13316"
+           x="50.787598"
+           y="908.23816">Deutsch</tspan></text>
+      <path
+         style="display:inline;fill:none;stroke:#babdb6;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 35.5,922.8622 207.602,0"
+         id="path13318"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         sodipodi:linespacing="125%"
+         id="text13320"
+         y="947.23816"
+         x="50.787598"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="947.23816"
+           x="50.787598"
+           id="tspan13322"
+           sodipodi:role="line">Español</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path13324"
+         d="m 35.5,961.8622 207.2546,0"
+         style="display:inline;fill:none;stroke:#babdb6;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         sodipodi:linespacing="125%"
+         id="text13326"
+         y="869.23816"
+         x="50.787598"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="869.23816"
+           x="50.787598"
+           id="tspan13328"
+           sodipodi:role="line">English</tspan></text>
+      <g
+         id="g13330"
+         transform="translate(111.9383,856.4247)"
+         style="display:inline;fill:#2e3436"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
+        <g
+           style="display:inline;fill:#2e3436"
+           id="g13332"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="status" />
+        <g
+           id="g13334"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="devices"
+           style="fill:#2e3436" />
+        <g
+           id="g13336"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="apps"
+           style="fill:#2e3436" />
+        <g
+           id="g13338"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="places"
+           style="fill:#2e3436" />
+        <g
+           id="g13340"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="mimetypes"
+           style="fill:#2e3436" />
+        <g
+           style="display:inline;fill:#2e3436"
+           id="g13342"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="emblems" />
+        <g
+           style="display:inline;fill:#2e3436"
+           id="g13344"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="emotes" />
+        <g
+           style="display:inline;fill:#2e3436"
+           id="g13346"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="categories" />
+        <g
+           style="display:inline;fill:#2e3436"
+           id="g13348"
+           transform="translate(-61.000665,-787)"
+           inkscape:label="actions">
+          <path
+             style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+             id="path13350"
+             d="M 72.9375,790.9375 68,795.875 l -1.9375,-1.9375 -2.125,2.125 3,3 1.0625,1.0625 1.0625,-1.0625 6,-6 -2.125,-2.125 z"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/aday/checkout/gnome-devel-docs/hig3/C/figures/drop-down-list.png"
+         sodipodi:linespacing="125%"
+         id="text13352"
+         y="986.2384"
+         x="50.787598"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.30000019px;line-height:125%;font-family:Cantarell;-inkscape-font-specification:Cantarell;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e3436;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="986.2384"
+           x="50.787598"
+           id="tspan13354"
+           sodipodi:role="line">Français</tspan></text>
+    </g>
+  </g>
+</svg>
